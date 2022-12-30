@@ -1,0 +1,40 @@
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.li {
+  float: left;
+}
+
+.link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+  font-family: 'Arial';
+}
+
+.li a:hover:not(.active) {
+  background-color: orange;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  text-decoration: none;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0px 10px;
+}
