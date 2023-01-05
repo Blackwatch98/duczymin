@@ -15,17 +15,12 @@ function NavBar() {
         </li>
         <li className={styles.li}>
             <Link className={styles.link} href="/">
-                Bramy garażowe
-            </Link>
-        </li>
-        <li className={styles.li}>
-            <Link className={styles.link} href="/">
                 Okna PCV
             </Link>
         </li>
         <li className={styles.li}>
             <Link className={styles.link} href="/">
-                Parapety
+                Bramy garażowe
             </Link>
         </li>
         <li className={styles.li}>
@@ -51,6 +46,11 @@ function NavBar() {
         <li className={styles.li}>
             <Link className={styles.link} href="/">
                 Automatyka
+            </Link>
+        </li>
+        <li className={styles.li}>
+            <Link className={styles.link} href="/">
+                Parapety
             </Link>
         </li>
         <li className={styles.li}>
