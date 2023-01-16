@@ -1,51 +1,30 @@
-.row {
-  table-layout: fixed;
-  margin: auto;
-  width: 60%;
-  height: auto;
-  overflow: auto;
-  column-gap: 30px;
+.columnsContainer {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
 }
 
 .col {
   float: left;
-  width: 33.33%;
+  width: 25%;
 }
 
-.centeredContainer {
-  margin-top: 20px;
+.copyrightContainer {
+  margin-top: 40px;
+  text-align: center;
+  color: #bbbbbb;
+}
+
+.contact-li {
+  
+}
+
+.logoImage {
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .signature {
   font-size: 12px;
-}
-
-.ul {
-  list-style-type: none;
-  margin-top: 20px;
-  padding: 0;
-}
-
-.contactLi {
-  float: left;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.li {
-  float: left;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.link {
-  color: white;
-  width: auto;
-  display: block; 
-  float: left;
-  overflow: hidden; 
-}
-
-.link:hover {
-  text-decoration: underline;
 }

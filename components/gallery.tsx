@@ -23,7 +23,6 @@ function Gallery() {
         <div className={styles.galleryContainer}>
                 <GalleryImage/>
         </div>
-        
     );
 }
 
