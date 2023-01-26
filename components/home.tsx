@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Gallery from '../components/gallery';
 import Footer from '../components/footer';
 import styles from '../styles/Home.module.css'
+import Map from './map';
 
 function MyHome() {
     return (
@@ -18,6 +19,7 @@ function MyHome() {
         <h1>Oferta dla firm</h1>
         <Gallery/>
         <h1>Znajdź nas</h1>
+        <Map/>
         <Footer/>
       </div>     
       </>
