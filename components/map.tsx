@@ -13,7 +13,7 @@ export default function Map() {
         <GoogleMap
             zoom = {15}
             center = {{ lat: 51.7903098959238, lng: 19.340856562499862 }}
-            mapContainerStyle = { {width: "100vw", height: "75vh" }}
+            mapContainerStyle = { {width: "100%", height: "75vh" }}
         >
             <Marker
             lat={51.7903098959238}
