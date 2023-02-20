@@ -81,7 +81,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className='footer-col'>
-                        <h4>Oferta dla domów</h4>
+                        <h4>Produkty dla domów</h4>
                         <ul>
                             <li>
                                 <Link href="/">
@@ -126,7 +126,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className='footer-col'>
-                        <h4>Oferta dla firm</h4>
+                        <h4>Produkty dla firm</h4>
                         <ul>
                             <li>
                                 <Link href="/">

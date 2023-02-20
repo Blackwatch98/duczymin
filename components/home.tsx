@@ -10,6 +10,32 @@ export interface CarouselImage {
   description?: string,
 }
 
+export type MyImage = {
+  src: string,
+  alt: string,
+  ref: string,
+  title: string,
+  description: string
+}
+
+const myImages: MyImage[] = [
+  {src: 'okna-pcv.jpg', alt:'okna-pcv', ref: "/okna", title:'Okna PCV', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
+  {src: 'brama.jpg', alt:'brama', ref: "/bramy", title:'Bramy garażowe', description:'Na razie brak.'},
+  {src: 'rolety-zew.jpg', alt:'rolety-zew', ref: "/rolety", title:'Rolety zewnętrzne', description:'Na razie brak.'},
+  {src: 'drzwi.jpg', alt:'drzwi', ref: "/drzwi", title:'Drzwi zewnętrzne', description:'Na razie brak.'},
+  {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: "/zaluzje", title:'Żaluzje fasadowe', description:'Na razie brak.'},
+  {src: 'parapet-wewnętrzny.jpg', alt:'rolety', ref: "/rolety", title:'Rolety wewnętrzne', description:'Na razie brak.'},
+  {src: 'parapet-wewnętrzny.jpg', alt:'automatyka', ref: "/automatyka", title:'Automatyka', description:'Na razie brak.'},
+  {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: "/parapety", title:'Parapety', description:'Na razie brak.'},
+]
+
+const myImages2: MyImage[] = [
+  {src: 'okna-pcv.jpg', alt:'bramy-przemyslowe', ref: "/bramy-przemyslowe", title:'Bramy przemysłowe', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
+  {src: 'brama.jpg', alt:'bramy-rolowane', ref: "/bramy-rolowane", title:'Bramy rolowane', description:'Na razie brak.'},
+  {src: 'rolety-zew.jpg', alt:'kraty-rolowane', ref: "/kraty-rolowane", title:'Kraty zewnętrzne', description:'Na razie brak.'},
+  {src: 'drzwi.jpg', alt:'stolarka-aluminiowa', ref: "/stolarka-aluminiowa", title:'Stolarka aluminiowa', description:'Na razie brak.'}
+]
+
 const images : CarouselImage[] = [{src: "/home.png"},
                                   {src: "/brama.jpg"},
                                   {src: "/okna-marzen.jpg"}]
@@ -50,7 +76,6 @@ function MyHome() {
   return (
     <>
       <div className={styles.div}>
-        <h1>Dom twoich marzeń</h1>
         <section aria-label="News">
           <div className={styles.carousel} data-carousel>
             <button onClick={() => movePrev()} className={`${styles["carousel-button"]} ${styles.prev}`}>&#8656;</button>
@@ -73,12 +98,12 @@ function MyHome() {
             </div>
           </div>
         </section>
-        <h1>Promocje</h1>
-        <h1>Oferta dla domów</h1>
-        <Gallery/>
-        <h1>Oferta dla firm</h1>
-        <Gallery/>
-        <h1>Znajdź nas</h1>
+        <h1 className={styles.h1}>Produkty dla domów</h1>
+        <Gallery images={myImages}/>
+        <h1 className={styles.h1}>Produkty dla firm</h1>
+        <Gallery images={myImages2}/>
+        <h1 className={styles.h1}>Obejrzyj nasze realizacje</h1>
+        <h1 className={styles.h1}>Znajdź nas</h1>
         <Map/>
         <Footer/>
       </div>     
