@@ -1,9 +1,23 @@
 .navbar {
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
   align-items: center;
-  background-color: #333;
+  background: none;
+  padding: 40px 100px;
+  transition: 0.5s;
+}
+
+.sticky {
+  position: fixed;
+  background: #333;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  color: black;
+  top: 0;
+  padding: 0px;
 }
 
 .brand-title {
@@ -12,27 +26,83 @@
 
 .navbar-links {
   height: 100%;
+  width: 100%;
 }
 
 .navbar-links ul {
   display: flex;
+  /**/
+  position: relative;
+  float: right;
   margin: 0;
   padding: 0;
 }
 
 .navbar-links li {
+  /**/
+  position: relative;
+  padding: 1rem;
   list-style-type: none;
+  color: white;
 }
 
 .link {
-  display: block;
-  color: white;
-  padding: 1rem;
+  /*display: block;*/
   font-family: 'Arial';
 }
 
-.navbar-links li:hover:not(.active) {
+.logo img{
+  height: 42px;
+  width: 150px;
+}
+
+.sticky .navbar-links li:hover/*:not(.active)*/ {
   background-color: orange;
+  color: black;
+}
+
+.navbar-links .link::before {
+    content: "";
+    height: 4px;
+    position: absolute;
+    width: 40%;
+    bottom: 4px;
+    background: rgb(244, 116, 5);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.navbar-links .link:hover::before {
+  transform: scaleX(1);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + .25rem);
+  background-color: white;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown > .link:focus + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover) {
+  .navbar-links .link::before {
+    transform: scaleX(0);
+  }
 }
 
 .toggle-button {
@@ -53,7 +123,7 @@
   border-radius: 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
