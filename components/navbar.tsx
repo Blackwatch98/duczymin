@@ -6,8 +6,8 @@ import Image from 'next/image'
 
 export default function NavBar() {
     const [isNavbarExpanded, setIsNavbarExpanded] = useState(true);
-
     const [isNavbarSticky, setisNavbarSticky] = useState(false);
+    const [isProductsClicked, setIsProductsClicked] = useState(false);
 
     const scrollNavbar = () => {
         if(window.scrollY > 0) {
@@ -23,10 +23,9 @@ export default function NavBar() {
     });
 
     let isActiveClass = isNavbarExpanded ? `${styles["navbar-links"]} ${styles.magic}` : styles["navbar-links"]
-    let isStickyNavClass = isNavbarSticky ? `${styles["navbar"]} ${styles["sticky"]}`: styles["navbar"]
 
     return (
-        <nav className={isStickyNavClass} onScroll={scrollNavbar}>
+        <nav className={styles.navbar} onScroll={scrollNavbar}>
             <Link className={styles.logo} href="/">
                 <Image src={img} alt='logo'/>
             </Link>
@@ -37,13 +36,13 @@ export default function NavBar() {
             </a>
             <div className={`${isActiveClass}`}>
                 <ul className={styles.ul} onClick={() => setIsNavbarExpanded(false)}>
-                    <div className={styles["dropdown"]}>
+                    <div className={styles.dropdown} onClick={() => {console.log('click'); setIsProductsClicked(!isProductsClicked)}}>
                         <li>
                             <Link className={styles.link} href="/">
                                 Produkty
                             </Link>
                         </li>
-                        <div className={styles["dropdown-menu"]}>
+                        <div className={`${styles["dropdown-menu"]} ${isProductsClicked ? styles.active : styles.inactive}`}>
                             Dropdown Content
                         </div>
                     </div>
