@@ -37,8 +37,8 @@ const companyProductsImages: MyImage[] = [
 ]
 
 const carouselImages : CarouselImage[] = [
-  {src: "/home.png"},
-  {src: "/brama.jpg"},
+  {src: "/promotions/test.jpg"},
+  {src: "/okna-marzen.jpg"},
   {src: "/promotions/promotion.jpg"}
 ]
 
@@ -104,6 +104,18 @@ export default function HomePage() {
         <h1 className={styles.h1}>Produkty dla firm</h1>
         <Gallery images={companyProductsImages}/>
         <h1 className={styles.h1}>Obejrzyj nasze realizacje</h1>
+        <div>
+          <div>
+            Zdjęcie1
+          </div>
+          <div>
+            Zdjęcie2
+          </div>
+          <div>
+            Zdjęcie3
+          </div>
+          <button>Więcej</button>
+        </div>
         <h1 className={styles.h1}>Znajdź nas</h1>
         <Map/>
         <Footer/>
