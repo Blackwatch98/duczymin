@@ -25,7 +25,7 @@ export default function NavBar() {
     let isActiveClass = isNavbarExpanded ? `${styles["navbar-links"]} ${styles.magic}` : styles["navbar-links"]
 
     return (
-        <nav className={styles.navbar} onScroll={scrollNavbar}>
+        <nav className={styles.navbar}>
             <Link className={styles.logo} href="/">
                 <Image src={img} alt='logo'/>
             </Link>
@@ -36,14 +36,35 @@ export default function NavBar() {
             </a>
             <div className={`${isActiveClass}`}>
                 <ul className={styles.ul} onClick={() => setIsNavbarExpanded(false)}>
-                    <div className={styles.dropdown} onClick={() => {console.log('click'); setIsProductsClicked(!isProductsClicked)}}>
+                    <div className={styles.dropdown} onMouseLeave={() => setIsProductsClicked(false)}>
                         <li>
-                            <Link className={styles.link} href="/">
+                            <Link className={styles.link} href="/" onMouseOver={() => {setIsProductsClicked(true)}}>
                                 Produkty
                             </Link>
                         </li>
                         <div className={`${styles["dropdown-menu"]} ${isProductsClicked ? styles.active : styles.inactive}`}>
-                            Dropdown Content
+                            <div className={styles.column}>
+                                <li><h3>Dla domów</h3></li>
+                                <li><a href="#">Okna PCV</a></li>
+                                <li><a href="#">Bramy garażowe</a></li>
+                                <li><a href="#">Rolety zewnętrzne</a></li>
+                                <li><a href="#">Drzwi zewnętrzne</a></li>
+                                <li><a href="#">Żaluzje fasadowe</a></li>
+                                <li><a href="#">Rolety wewnętrzne</a></li>
+                                <li><a href="#">Automatyka</a></li>
+                                <li><a href="#">Parapety</a></li>
+                            </div>
+                            <div className={styles.column}>
+                                <li><h3>Dla firm</h3></li>
+                                <li><a href="#">Bramy przemysłowe</a></li>
+                                <li><a href="#">Bramy rolowane</a></li>
+                                <li><a href="#">Kraty rolowane</a></li>
+                                <li><a href="#">Stolarka aluminiowa</a></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </div>
                         </div>
                     </div>
                     <li>

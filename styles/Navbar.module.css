@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 999;
   align-items: center;
   background: #333;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
@@ -31,6 +31,7 @@
   position: relative;
   list-style-type: none;
   color: #ffffff99;
+  background-color: #333;
   height: 100%;
 }
 
@@ -70,31 +71,69 @@
 }
 
 .dropdown-menu {
+    position: absolute;
+    display: table;
+    list-style-type: none;
+    left: 0;
+    background-color: #434343;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    overflow: hidden;
+    /*padding-bottom: 1px;*/
+    min-width: 400px;
+    transition: all 0.25s ease-in-out;
+    transition-property: height;
+}
+
+.dropdown .column {
+  display: table-cell;
+  width: 50%;
+}
+
+.dropdown h3 {
   position: absolute;
-  left: 0;
-  top: calc(100% + .25rem);
-  background-color: white;
-  padding: .75rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-  opacity: 0;
-  pointer-events: none;
+  max-height: 48px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #333;
+}
+
+.dropdown-menu li {
+  max-height: 48px;
+  background: none;
+}
+
+.dropdown-menu a {
+  position: absolute;
+  width: 100%;
+  color: #ffffff99;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgb(244, 116, 5);
+  max-height: 48px;
+  color: #fff;
+  transition: all .3s linear;
 }
 
 .dropdown-menu.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  height: 432px;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  border-bottom: 1px solid #333;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
 }
 
 .dropdown-menu.inactive {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  height: 0%;
 }
-
 
 @media (hover) {
   .navbar-links .link::before {
