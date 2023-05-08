@@ -3,7 +3,8 @@ import Gallery from '../components/gallery';
 import Footer from '../components/footer';
 import styles from '../styles/Home.module.css'
 import Map from './map';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { WrenchScrewdriverIcon, UserGroupIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
 
 export interface CarouselImage {
   src: string,
@@ -15,10 +16,10 @@ export interface MyImage {
   alt: string,
   ref: string,
   title: string,
-  description: string
+  description?: string
 }
 
-const homeProductsImages: MyImage[] = [
+const homeProductsImages : MyImage[] = [
   {src: 'okna-pcv.jpg', alt:'okna-pcv', ref: "/okna", title:'Okna PCV', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
   {src: 'brama.jpg', alt:'brama', ref: "/bramy", title:'Bramy garażowe', description:'Na razie brak.'},
   {src: 'rolety-zew.jpg', alt:'rolety-zew', ref: "/rolety", title:'Rolety zewnętrzne', description:'Na razie brak.'},
@@ -29,7 +30,7 @@ const homeProductsImages: MyImage[] = [
   {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: "/parapety", title:'Parapety', description:'Na razie brak.'},
 ]
 
-const companyProductsImages: MyImage[] = [
+const companyProductsImages : MyImage[] = [
   {src: 'okna-pcv.jpg', alt:'bramy-przemyslowe', ref: "/bramy-przemyslowe", title:'Bramy przemysłowe', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
   {src: 'brama.jpg', alt:'bramy-rolowane', ref: "/bramy-rolowane", title:'Bramy rolowane', description:'Na razie brak.'},
   {src: 'rolety-zew.jpg', alt:'kraty-rolowane', ref: "/kraty-rolowane", title:'Kraty zewnętrzne', description:'Na razie brak.'},
@@ -42,8 +43,34 @@ const carouselImages : CarouselImage[] = [
   {src: "/promotions/promotion.jpg"}
 ]
 
+const cardsCarouselImages : MyImage[] = [
+  {src: 'okna-pcv.jpg', alt:'bramy-rolowane', ref: "/bramy-przemyslowe", title:'Bramy przemysłowe'},
+  {src: 'brama.jpg', alt:'bramy-rolowane', ref: "/bramy-rolowane", title:'Bramy rolowane'},
+  {src: 'rolety-zew.jpg', alt:'kraty-rolowane', ref: "/kraty-rolowane", title:'Kraty zewnętrzne'},
+  {src: 'drzwi.jpg', alt:'stolarka-aluminiowa', ref: "/stolarka-aluminiowa", title:'Stolarka aluminiowa'}
+] 
+
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(1);
+  const imageHoverRef = useRef();
+  const [myElementIsVisible, setMyElementIsVisible] = useState(false);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+
+      if( !entry.isIntersecting ) {
+        return;
+      }
+
+      setMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(imageHoverRef.current);
+
+    return () => {
+      observer.unobserve(imageHoverRef.current);
+    }
+  }, []);
 
   const moveNext = () => {
     if(currentIndex !== carouselImages.length) {
@@ -77,7 +104,7 @@ export default function HomePage() {
   return (
     <>
       <div className={styles.carouselDiv}>
-        <section aria-label="News">
+        <section>
           <div className={styles.carousel} data-carousel>
             <button onClick={() => movePrev()} className={`${styles["carousel-button"]} ${styles.prev}`}>&#8656;</button>
             <button onClick={() => moveNext()} className={`${styles["carousel-button"]} ${styles.next}`}>&#8658;</button>
@@ -85,7 +112,7 @@ export default function HomePage() {
               {
                 carouselImages.map((image, imageIndex) => (
                 <li className={currentIndex === imageIndex + 1 ? styles.slideActive : styles.slide}>
-                  <Image width={1000} height={100} className={styles.slideImage} src={image.src} alt='home'/>
+                  <img className={styles.slideImage} src={image.src} alt='home'/>
                 </li>))
               }
             </ul>
@@ -99,27 +126,65 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <h1 className={styles.h1}>O nas</h1>
+        <div className={styles.aboutContainer}>
+          <div className={styles.aboutDescriptionContainer}>
+            <p>
+                Firma DUCZYMIN od lat specjalizuje się w montażu i serwisie systemów bramowych, 
+                ogrodzeniowych oraz automatyki. Ponadto w naszej ofercie znajdziecie Państwo okna 
+                oraz szeroką gamę osłon okiennych. Firma nasza postawiła przede wszystkim na jakość,
+                trwałość i estetykę oferowanych produktów. Dlatego ściśle współpracyjemy z najbardziej
+                cenionymi producentami na rynku. Oferowane produkty są najwyższej jakości odpowiadające
+                standardom bezpieczeństwa, o najwyższym komforcie oraz estetyce.
+            </p>
+            <p>
+                Swoim klientom oferujemy krótki termin realizacji, fachowy montaż oraz atrakcyjne ceny.
+                Nasza współpraca obejmuje bezpłatne porady i pomiar. Dysponujemy wyspecjalizowanymi ekipami
+                monterskimi oraz zapleczem magazynowym i logistycznym.
+            </p>
+            <p>
+                Naszymi działaniami wspieramy klientów na każdym etapie doboru i użytkowania urządzeń.
+                Jeśli poszukują Państwo wysokiej jakości towarów, doświadczenia i fachowego doradztwa – zapraszamy do współpracy!
+            </p>
+          </div>
+        </div>
+        <div className={styles.badgesContainer}>
+          <div className={styles.badgesRow}>
+            <div className={styles.columnContainer}>
+                <Cog6ToothIcon className={styles.badgeIcon}/>
+                <h2>Serwis</h2>
+                <p>Dużo narzekania od majstra</p>
+            </div>
+            <div className={styles.columnContainer}>
+                <WrenchScrewdriverIcon className={styles.badgeIcon}/>
+                <h2>Montaż</h2>
+                <p>Powolny i drogi</p>
+            </div>
+            <div className={styles.columnContainer}>
+                <UserGroupIcon className={styles.badgeIcon}/>
+                <h2>Wieloletnie doświadczenie</h2>
+                <p>Ponad 10 lat w branży</p>
+            </div>
+          </div>
+        </div>
         <h1 className={styles.h1}>Produkty dla domów</h1>
         <Gallery images={homeProductsImages}/>
         <h1 className={styles.h1}>Produkty dla firm</h1>
         <Gallery images={companyProductsImages}/>
-        <h1 className={styles.h1}>Obejrzyj nasze realizacje</h1>
-        <div>
-          <div>
-            Zdjęcie1
+        <h1 className={styles.h1}>Nasze realizacje</h1>
+        <div className={styles.realizationContainer}>
+          <div className={styles.realizationBox}>
+            <img ref={imageHoverRef} src="home.png"></img>
+            <div className={`${styles.imageHover} ${myElementIsVisible ? styles.hovered : ''}`}>
+              <h2>Sprawdź dlaczego warto nam zaufać!</h2>
+              <button>Kliknij mnie</button>
+            </div>
           </div>
-          <div>
-            Zdjęcie2
-          </div>
-          <div>
-            Zdjęcie3
-          </div>
-          <button>Więcej</button>
         </div>
         <h1 className={styles.h1}>Znajdź nas</h1>
         <Map/>
         <Footer/>
-      </div>     
+      </div>
     </>
   );
 }

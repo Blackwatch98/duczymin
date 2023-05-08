@@ -2,7 +2,7 @@ import styles from '../styles/Gallery.module.css'
 import Link from 'next/link'
 import { MyImage } from './home';
 
-interface ImageProps {
+export interface ImageProps {
     images: MyImage[]
 }
 
@@ -17,7 +17,7 @@ const Gallery: React.FC<ImageProps> = ({images}: ImageProps) => {
                         <h3 className={styles.myCardTitle}>{image.title}</h3>
                         <p className={styles.description}>{image.description}</p>
                         <Link href={image.ref} passHref>
-                            <button className={styles.button}type="submit">Zobacz ofertę</button>
+                            <button className={styles.button}type="submit">Sprawdź ofertę</button>
                         </Link>
                         
                     </div>   
