@@ -4,7 +4,10 @@ import styles from '../styles/Marker.module.css'
 const Marker = (props: any) => {
     const { color, name, id } = props;
     return (
-      <div className={styles.marker}>
+      <div>
+        
+      </div>
+      {/*<div className={styles.marker}>
         <div
           className={`${styles.pin} ${styles.bounce}`}
           style={{ backgroundColor: color, cursor: 'pointer' }}
@@ -12,6 +15,7 @@ const Marker = (props: any) => {
         />
         <div className={styles.pulse} />
       </div>
+    */}
     );
   };
 

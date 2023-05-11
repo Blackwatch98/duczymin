@@ -32,6 +32,10 @@
   list-style-type: none;
   color: #ffffff99;
   background-color: #333;
+  height: 64px;
+}
+
+.dropdown .column li {
   height: 100%;
 }
 
@@ -39,11 +43,12 @@
   display: block;
   font-family: 'Arial';
   padding: 1rem;
+  line-height: 32px;
 }
 
 .logo img {
-  height: 42px;
-  width: 150px;
+  height: 60px;
+  width: 260px;
 }
 
 .navbar-links li:hover {

@@ -1,5 +1,5 @@
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
-import Marker from "./marker";
+import { GoogleMap, useLoadScript, MarkerF, OverlayView, InfoWindow } from "@react-google-maps/api";
+/*import Marker from "./marker";*/
 
 
 export default function Map() {
@@ -11,16 +11,29 @@ export default function Map() {
 
     return (
         <GoogleMap
-            zoom = {15}
+            zoom = {17}
             center = {{ lat: 51.7903098959238, lng: 19.340856562499862 }}
             mapContainerStyle = { {width: "100%", height: "75vh" }}
         >
-            <Marker
-            lat={51.7903098959238}
-            lng={19.340856562499862}
-            name="My Marker"
-            color="red"
-          />
+            <MarkerF
+                key="marker_1"
+                position={{
+                    lat: 51.7903098959238,
+                    lng: 19.340856562499862
+                }}
+                icon={{
+
+                    url: '/markerIcon.png',
+            
+                    anchor: new google.maps.Point(30, 55),
+            
+                    scaledSize: new google.maps.Size(60, 60)
+            
+                }}
+            />
+            <InfoWindow>
+                TEST
+            </InfoWindow>
         </GoogleMap>
     );
 }

@@ -165,6 +165,11 @@ export default function HomePage() {
                 <h2>Wieloletnie doświadczenie</h2>
                 <p>Ponad 10 lat w branży</p>
             </div>
+            <div className={styles.columnContainer}>
+                <UserGroupIcon className={styles.badgeIcon}/>
+                <h2>Fachowe doradztwo</h2>
+                <p>Bo my lepiej wiemy czego potrzebujesz</p>
+            </div>
           </div>
         </div>
         <h1 className={styles.h1}>Produkty dla domów</h1>
