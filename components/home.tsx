@@ -65,9 +65,9 @@ export default function HomePage() {
 
       setMyElementIsVisible(entry.isIntersecting);
     });
-    observer.observe(imageHoverRef.current);
+    observer.observe(imageHoverRef.current!);
     return () => {
-      observer.unobserve(imageHoverRef.current);
+      observer.unobserve(imageHoverRef.current!);
     }
   }, []);
 
