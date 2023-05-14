@@ -52,7 +52,7 @@ const cardsCarouselImages : MyImage[] = [
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(1);
-  const imageHoverRef = useRef();
+  const imageHoverRef = useRef(null);
   const [myElementIsVisible, setMyElementIsVisible] = useState(false);
   
   useEffect(() => {
