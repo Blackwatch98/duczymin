@@ -20,18 +20,18 @@ export interface MyImage {
 }
 
 const homeProductsImages : MyImage[] = [
-  {src: 'okna-pcv.jpg', alt:'okna-pcv', ref: "/okna", title:'Okna PCV', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
-  {src: 'brama.jpg', alt:'brama', ref: "/bramy", title:'Bramy garażowe', description:'Na razie brak.'},
-  {src: 'rolety-zew.jpg', alt:'rolety-zew', ref: "/rolety", title:'Rolety zewnętrzne', description:'Na razie brak.'},
-  {src: 'drzwi.jpg', alt:'drzwi', ref: "/drzwi", title:'Drzwi zewnętrzne', description:'Na razie brak.'},
-  {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: "/zaluzje", title:'Żaluzje fasadowe', description:'Na razie brak.'},
-  {src: 'parapet-wewnętrzny.jpg', alt:'rolety', ref: "/rolety", title:'Rolety wewnętrzne', description:'Na razie brak.'},
-  {src: 'parapet-wewnętrzny.jpg', alt:'automatyka', ref: "/automatyka", title:'Automatyka', description:'Na razie brak.'},
-  {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: "/parapety", title:'Parapety', description:'Na razie brak.'},
+  {src: 'okna-pcv2.jpg', alt:'okna-pcv', ref: "/okna", title:'Okna PCV', description:'Okna stanowią nie tylko podstawowy element każdego budynku, ale również są jego dekoracją...'},
+  {src: 'brama-garaz.jpg', alt:'brama', ref: "/bramy", title:'Bramy garażowe', description:'Brama powinna być dopasowana do elewacji budynku oraz swoją konstrukcją zapewniać maksimum bezpieczeństwa...'},
+  {src: 'rolety-zew2.jpg', alt:'rolety-zew', ref: "/rolety", title:'Rolety zewnętrzne', description:'Zapewniają wygodę, ułatwiają oszczędzanie energii i poprawiają skuteczność ochrony antywłamaniowej...'},
+  {src: 'drzwi-zew.jpg', alt:'drzwi', ref: "/drzwi", title:'Drzwi zewnętrzne', description:'Oprócz roli zabezpieczenia budynków i mieszkań stanowią też zaporę przed utrata ciepła...'},
+  {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: "/zaluzje", title:'Żaluzje fasadowe', description:'Żaluzje skutecznie chronią wnętrze domu przed promieniami słonecznymi, nie dopuszczając do wzrostu temperatury...'},
+  {src: 'rolety-wew.jpg', alt:'rolety', ref: "/rolety", title:'Rolety wewnętrzne', description:'Na razie brak.'},
+  {src: 'automatyka.jpg', alt:'automatyka', ref: "/automatyka", title:'Automatyka', description:'Tylko profesjonalny dobór i montaż automatyki domowej zapewnia prawidłowe i długoletnie funkcjonowanie urządzeń sterujących...'},
+  {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: "/parapety", title:'Parapety', description:'Parapety stanowią ważny element wykończeniowy okien...'},
 ]
 
 const companyProductsImages : MyImage[] = [
-  {src: 'okna-pcv.jpg', alt:'bramy-przemyslowe', ref: "/bramy-przemyslowe", title:'Bramy przemysłowe', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
+  {src: 'bramy-przemysl.jpg', alt:'bramy-przemyslowe', ref: "/bramy-przemyslowe", title:'Bramy przemysłowe', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
   {src: 'brama.jpg', alt:'bramy-rolowane', ref: "/bramy-rolowane", title:'Bramy rolowane', description:'Na razie brak.'},
   {src: 'rolety-zew.jpg', alt:'kraty-rolowane', ref: "/kraty-rolowane", title:'Kraty zewnętrzne', description:'Na razie brak.'},
   {src: 'drzwi.jpg', alt:'stolarka-aluminiowa', ref: "/stolarka-aluminiowa", title:'Stolarka aluminiowa', description:'Na razie brak.'}
@@ -66,7 +66,6 @@ export default function HomePage() {
       setMyElementIsVisible(entry.isIntersecting);
     });
     observer.observe(imageHoverRef.current);
-
     return () => {
       observer.unobserve(imageHoverRef.current);
     }

@@ -1,11 +1,18 @@
-import { GoogleMap, useLoadScript, MarkerF, OverlayView, InfoWindow } from "@react-google-maps/api";
-/*import Marker from "./marker";*/
+import { GoogleMap, useLoadScript, MarkerF, OverlayView, InfoWindowF } from "@react-google-maps/api";
+import { useState } from 'react';
+import styles from '../styles/Map.module.css'
 
 
 export default function Map() {
+    const [activeMarker, setActiveMarker] = useState(false);
+
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY as string
     });
+
+    const showInMapClicked = () => {
+        window.open("https://goo.gl/maps/fgwVTpTbtrD8fxSJA?coh=178571&entry=tt");
+      };
 
     if (!isLoaded) return <div>Ładuję się</div>;
 
@@ -18,22 +25,21 @@ export default function Map() {
             <MarkerF
                 key="marker_1"
                 position={{
-                    lat: 51.7903098959238,
+                    lat: 51.7903003959238,
                     lng: 19.340856562499862
                 }}
-                icon={{
-
-                    url: '/markerIcon.png',
-            
-                    anchor: new google.maps.Point(30, 55),
-            
-                    scaledSize: new google.maps.Size(60, 60)
-            
-                }}
-            />
-            <InfoWindow>
-                TEST
-            </InfoWindow>
+                icon={'/markerIconAdv2.png'}
+                onClick={() => !activeMarker ? setActiveMarker(true) : setActiveMarker(false)}
+            >
+                {activeMarker ? (
+                    <InfoWindowF>
+                    <div className={styles.popup}>
+                        <p>Salon DUCZYMIN, 95-070 Rąbień ul. Słowiańska 92</p>
+                        <button onClick={showInMapClicked}>Znajdź mnie na mapie</button>
+                    </div>
+                    </InfoWindowF>
+                ) : null}
+            </MarkerF>
         </GoogleMap>
     );
 }
