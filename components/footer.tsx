@@ -24,7 +24,7 @@ const images: Image[] = [
 
 function Footer() {
     return (
-        <footer>
+        <footer className={styles.footer}>
             <div className={styles.columnsContainer}>
                 <div className='row'>
                     <div className='footer-col'>

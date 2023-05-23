@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import Gallery from '../components/gallery';
-import Footer from '../components/footer';
 import styles from '../styles/Home.module.css'
 import Map from './map';
 import { useState, useEffect, useRef } from 'react';
@@ -42,13 +40,6 @@ const carouselImages : CarouselImage[] = [
   {src: "/okna-marzen.jpg"},
   {src: "/promotions/promotion.jpg"}
 ]
-
-const cardsCarouselImages : MyImage[] = [
-  {src: 'okna-pcv.jpg', alt:'bramy-rolowane', ref: "/bramy-przemyslowe", title:'Bramy przemysłowe'},
-  {src: 'brama.jpg', alt:'bramy-rolowane', ref: "/bramy-rolowane", title:'Bramy rolowane'},
-  {src: 'rolety-zew.jpg', alt:'kraty-rolowane', ref: "/kraty-rolowane", title:'Kraty zewnętrzne'},
-  {src: 'drzwi.jpg', alt:'stolarka-aluminiowa', ref: "/stolarka-aluminiowa", title:'Stolarka aluminiowa'}
-] 
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -187,7 +178,6 @@ export default function HomePage() {
         </div>
         <h1 className={styles.h1}>Znajdź nas</h1>
         <Map/>
-        <Footer/>
       </div>
     </>
   );

@@ -45,14 +45,14 @@ export default function NavBar() {
                         <div className={`${styles["dropdown-menu"]} ${isProductsClicked ? styles.active : styles.inactive}`}>
                             <div className={styles.column}>
                                 <li><h3>Dla domów</h3></li>
-                                <li><a href="#">Okna PCV</a></li>
-                                <li><a href="#">Bramy garażowe</a></li>
-                                <li><a href="#">Rolety zewnętrzne</a></li>
-                                <li><a href="#">Drzwi zewnętrzne</a></li>
-                                <li><a href="#">Żaluzje fasadowe</a></li>
-                                <li><a href="#">Rolety wewnętrzne</a></li>
-                                <li><a href="#">Automatyka</a></li>
-                                <li><a href="#">Parapety</a></li>
+                                <li><a href="/produkty/okna-pcv">Okna PCV</a></li>
+                                <li><a href="/produkty/bramy-grazowe">Bramy garażowe</a></li>
+                                <li><a href="/produkty/rolety-zewnetrzne">Rolety zewnętrzne</a></li>
+                                <li><a href="/produkty/drzwi-zewnetrzne">Drzwi zewnętrzne</a></li>
+                                <li><a href="/produkty/zaluzje-fasadowe">Żaluzje fasadowe</a></li>
+                                <li><a href="/produkty/rolety-wewnetrzne">Rolety wewnętrzne</a></li>
+                                <li><a href="/produkty/automatyka">Automatyka</a></li>
+                                <li><a href="/produkty/parapety">Parapety</a></li>
                             </div>
                             <div className={styles.column}>
                                 <li><h3>Dla firm</h3></li>
