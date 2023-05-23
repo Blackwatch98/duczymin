@@ -30,7 +30,7 @@ const homeProductsImages : MyImage[] = [
 
 const companyProductsImages : MyImage[] = [
   {src: 'bramy-przemysl.jpg', alt:'bramy-przemyslowe', ref: "/bramy-przemyslowe", title:'Bramy przemysłowe', description:'Na razie brak. To jest teki przykładowy tekst dla jaj żeby sprawdzić czy coś tu w ogóle działa :)'},
-  {src: 'brama.jpg', alt:'bramy-rolowane', ref: "/bramy-rolowane", title:'Bramy rolowane', description:'Na razie brak.'},
+  {src: 'brama-rolowana.jpg', alt:'bramy-rolowane', ref: "/bramy-rolowane", title:'Bramy rolowane', description:'Na razie brak.'},
   {src: 'rolety-zew.jpg', alt:'kraty-rolowane', ref: "/kraty-rolowane", title:'Kraty zewnętrzne', description:'Na razie brak.'},
   {src: 'drzwi.jpg', alt:'stolarka-aluminiowa', ref: "/stolarka-aluminiowa", title:'Stolarka aluminiowa', description:'Na razie brak.'}
 ]
@@ -143,12 +143,12 @@ export default function HomePage() {
             <div className={styles.columnContainer}>
                 <Cog6ToothIcon className={styles.badgeIcon}/>
                 <h2>Serwis</h2>
-                <p>Dużo narzekania od majstra</p>
+                <p>5 lat gwarancji</p>
             </div>
             <div className={styles.columnContainer}>
                 <WrenchScrewdriverIcon className={styles.badgeIcon}/>
                 <h2>Montaż</h2>
-                <p>Powolny i drogi</p>
+                <p>Szybki i sprawny</p>
             </div>
             <div className={styles.columnContainer}>
                 <UserGroupIcon className={styles.badgeIcon}/>
@@ -158,7 +158,7 @@ export default function HomePage() {
             <div className={styles.columnContainer}>
                 <UserGroupIcon className={styles.badgeIcon}/>
                 <h2>Fachowe doradztwo</h2>
-                <p>Bo my lepiej wiemy czego potrzebujesz</p>
+                <p>Nie możesz się zdecydować? Pozwól nam pomóc!</p>
             </div>
           </div>
         </div>
