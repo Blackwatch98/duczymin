@@ -1,6 +1,18 @@
 import Head from 'next/head'
-import Body from 'next/head'
 import styles from '../../../styles/Products.module.css'
+import ProductsGallery from '../../../components/products_gallery';
+import { MyImage } from '../../../components/home';
+
+
+const productsImages : MyImage[] = [
+  {src: '/okna-marzen.jpg', alt:'okna-marzen', title:'Pixel'},
+  {src: '/okna-koncept.jpg', alt:'okna-koncept', title:'Koncept'},
+  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Prolux'},
+  {src: '/okna-pcv2.jpg', alt:'drzwi', title:'Winergetic Premium'},
+  {src: '/okna-winergetic-premium-passive.jpg', alt:'winergetic-pp', title:'Winergetic Premium Passive'},
+  {src: '/okna-prismatic.jpg', alt:'okna-prismatic', title:'Prismatic'},
+  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Pava'}
+]
 
 export default function WindowsPage() {
   return (
@@ -12,42 +24,26 @@ export default function WindowsPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.bodyContainer}>
+        <div className={styles.headerContainer}>
           <h1>Okna PCV</h1>
-          <div className={styles.descriptionContainer}>
-            Okna powinny spełniać przede wszystkim wszelkie wymagania techniczne. W parze z wysokimi właściwościami
-            izolacyjnymi powinna iść również funkcjonalność oraz design wykonania. Okna stanowią nie tylko podstawowy
-            element każdego budynku, ale również są jego dekoracją. Przeszklenia powinny współgrać z elewacją i stylistyką obiektu.
-            Wszystkie te aspekty spełniają systemy okienne OKNOPLAST.
+        </div>
+        <div className={styles.descriptionContainer}>
+          <div className={styles.descriptionPanel}>
+            <p>
+              Okna powinny spełniać przede wszystkim wszelkie wymagania techniczne. W parze z wysokimi właściwościami
+              izolacyjnymi powinna iść również funkcjonalność oraz design wykonania. Okna stanowią nie tylko podstawowy
+              element każdego budynku, ale również są jego dekoracją. Przeszklenia powinny współgrać z elewacją i stylistyką obiektu.
+              Wszystkie te aspekty spełniają systemy okienne OKNOPLAST.
+            </p>
           </div>
-          <div className={styles.catalogsContainer}>
-            <h2>Oknoplast</h2>
-            <div className={styles.row}>
-              <div className={styles.rowElement}>
-                <div className={styles.elementInfoContainer}>
-                  <div className={styles.titleContainer}>
-                    <p>Pixel</p>
-                  </div>
-                  <div className={styles.buttonContainer}>
-                    <button>POBIERZ KATALOG</button>
-                  </div>
-                </div>
-                <img src="/okna-pcv.jpg"></img>
-                <div className={styles.imageHover}></div>
-              </div>
-            </div>
-            <div className={styles.row}>
-              <div>Katalog 1</div>
-              <div>Katalog 2</div>
-              <div>Katalog 3</div>
-              <div>Katalog 4</div>
-            </div>
-            <div className={styles.row}>
-              <div>Katalog 1</div>
-              <div>Katalog 2</div>
-              <div>Katalog 3</div>
-              <div>Katalog 4</div>
-            </div>
-          </div>
+        </div>
+        <div className={styles.landscapeContainer}>
+          <img src={`/okna-pcv2.jpg`}/>
+        </div>
+        <div className={styles.producerNameContainer}>
+          <h2>OKNOPLAST</h2>
+        </div>
+        <ProductsGallery images={productsImages}/>
       </div>
     </>
   )

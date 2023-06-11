@@ -12,7 +12,7 @@ export interface CarouselImage {
 export interface MyImage {
   src: string,
   alt: string,
-  ref: string,
+  ref?: string,
   title: string,
   description?: string
 }
