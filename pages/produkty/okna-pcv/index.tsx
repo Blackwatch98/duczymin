@@ -5,13 +5,13 @@ import { MyImage } from '../../../components/home';
 
 
 const productsImages : MyImage[] = [
-  {src: '/okna-marzen.jpg', alt:'okna-marzen', title:'Pixel'},
-  {src: '/okna-koncept.jpg', alt:'okna-koncept', title:'Koncept'},
-  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Prolux'},
+  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Pava'},
   {src: '/okna-pcv2.jpg', alt:'drzwi', title:'Winergetic Premium'},
   {src: '/okna-winergetic-premium-passive.jpg', alt:'winergetic-pp', title:'Winergetic Premium Passive'},
   {src: '/okna-prismatic.jpg', alt:'okna-prismatic', title:'Prismatic'},
-  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Pava'}
+  {src: '/okna-marzen.jpg', alt:'okna-marzen', title:'Pixel'},
+  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Prolux'},
+  {src: '/okna-koncept.jpg', alt:'okna-koncept', title:'Koncept'}
 ]
 
 export default function WindowsPage() {
