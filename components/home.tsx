@@ -18,8 +18,8 @@ export interface MyImage {
 }
 
 const homeProductsImages : MyImage[] = [
-  {src: 'okna-pcv2.jpg', alt:'okna-pcv', ref: "/okna", title:'Okna PCV', description:'Okna stanowią nie tylko podstawowy element każdego budynku, ale również są jego dekoracją...'},
-  {src: 'brama-garaz.jpg', alt:'brama', ref: "/bramy", title:'Bramy garażowe', description:'Brama powinna być dopasowana do elewacji budynku oraz swoją konstrukcją zapewniać maksimum bezpieczeństwa...'},
+  {src: 'okna-pcv2.jpg', alt:'okna-pcv', ref: "/produkty/okna-pcv", title:'Okna PCV', description:'Okna stanowią nie tylko podstawowy element każdego budynku, ale również są jego dekoracją...'},
+  {src: 'brama-garaz.jpg', alt:'brama', ref: "/produkty/bramy-garazowe", title:'Bramy garażowe', description:'Brama powinna być dopasowana do elewacji budynku oraz swoją konstrukcją zapewniać maksimum bezpieczeństwa...'},
   {src: 'rolety-zew2.jpg', alt:'rolety-zew', ref: "/rolety", title:'Rolety zewnętrzne', description:'Zapewniają wygodę, ułatwiają oszczędzanie energii i poprawiają skuteczność ochrony antywłamaniowej...'},
   {src: 'drzwi-zew.jpg', alt:'drzwi', ref: "/drzwi", title:'Drzwi zewnętrzne', description:'Oprócz roli zabezpieczenia budynków i mieszkań stanowią też zaporę przed utrata ciepła...'},
   {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: "/zaluzje", title:'Żaluzje fasadowe', description:'Żaluzje skutecznie chronią wnętrze domu przed promieniami słonecznymi, nie dopuszczając do wzrostu temperatury...'},
@@ -57,7 +57,9 @@ export default function HomePage() {
       setMyElementIsVisible(entry.isIntersecting);
     });
     observer.observe(imageHoverRef.current!);
+ 
     return () => {
+      if(imageHoverRef.current! != null)
       observer.unobserve(imageHoverRef.current!);
     }
   }, []);

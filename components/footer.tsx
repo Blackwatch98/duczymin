@@ -84,12 +84,12 @@ function Footer() {
                         <h4>Produkty dla domów</h4>
                         <ul>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/okna-pcv">
                                     Okna PCV
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/bramy-garazowe">
                                     Bramy garażowe
                                 </Link>
                             </li>

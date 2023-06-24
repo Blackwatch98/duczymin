@@ -4,14 +4,16 @@ import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
-const productsImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Pava'},
-  {src: '/okna-pcv2.jpg', alt:'drzwi', title:'Winergetic Premium'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'winergetic-pp', title:'Winergetic Premium Passive'},
-  {src: '/okna-prismatic.jpg', alt:'okna-prismatic', title:'Prismatic'},
-  {src: '/okna-marzen.jpg', alt:'okna-marzen', title:'Pixel'},
-  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Prolux'},
-  {src: '/okna-koncept.jpg', alt:'okna-koncept', title:'Koncept'}
+const krispolImages : MyImage[] = [
+  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
+  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
+  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+]
+
+const wisniowskiImages : MyImage[] = [
+  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
+  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
+  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
 ]
 
 export default function WindowsPage() {
@@ -26,7 +28,7 @@ export default function WindowsPage() {
       <div className={styles.bodyContainer}>
         <div className={styles.headerContainer}>
           <img className={styles.divider} src="/title_divider.png"></img>
-          <h1>Okna PCV</h1>
+          <h1>Rolety wewnętrzne</h1>
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
@@ -35,17 +37,20 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-              Okna powinny spełniać przede wszystkim wszelkie wymagania techniczne. W parze z wysokimi właściwościami
-              izolacyjnymi powinna iść również funkcjonalność oraz design wykonania. Okna stanowią nie tylko podstawowy
-              element każdego budynku, ale również są jego dekoracją. Przeszklenia powinny współgrać z elewacją i stylistyką obiektu.
-              Wszystkie te aspekty spełniają systemy okienne OKNOPLAST.
+            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
+            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
+            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
             </p>
           </div>
         </div>
         <div className={styles.producerNameContainer}>
-          <h2>Oknoplast</h2>
+          <h2>Krispol</h2>
         </div>
-        <ProductsGallery images={productsImages}/>
+        <ProductsGallery images={krispolImages}/>
+        <div className={styles.producerNameContainer}>
+          <h2>Wiśniowski</h2>
+        </div>
+        <ProductsGallery images={wisniowskiImages}/>
       </div>
     </>
   )

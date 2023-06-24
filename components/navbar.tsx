@@ -46,7 +46,7 @@ export default function NavBar() {
                             <div className={styles.column}>
                                 <li><h3>Dla domów</h3></li>
                                 <li><a href="/produkty/okna-pcv">Okna PCV</a></li>
-                                <li><a href="/produkty/bramy-grazowe">Bramy garażowe</a></li>
+                                <li><a href="/produkty/bramy-garazowe">Bramy garażowe</a></li>
                                 <li><a href="/produkty/rolety-zewnetrzne">Rolety zewnętrzne</a></li>
                                 <li><a href="/produkty/drzwi-zewnetrzne">Drzwi zewnętrzne</a></li>
                                 <li><a href="/produkty/zaluzje-fasadowe">Żaluzje fasadowe</a></li>
@@ -56,10 +56,10 @@ export default function NavBar() {
                             </div>
                             <div className={styles.column}>
                                 <li><h3>Dla firm</h3></li>
-                                <li><a href="#">Bramy przemysłowe</a></li>
-                                <li><a href="#">Bramy rolowane</a></li>
-                                <li><a href="#">Kraty rolowane</a></li>
-                                <li><a href="#">Stolarka aluminiowa</a></li>
+                                <li><a href="/produkty/bramy-przemyslowe">Bramy przemysłowe</a></li>
+                                <li><a href="/produkty/bramy-rolowane">Bramy rolowane</a></li>
+                                <li><a href="/produkty/kraty-rolowane">Kraty rolowane</a></li>
+                                <li><a href="/produkty/stolarka-aluminiowa">Stolarka aluminiowa</a></li>
                                 <li></li>
                                 <li></li>
                                 <li></li>
