@@ -204,3 +204,15 @@ footer {
       transition-delay: 0ms !important;
   }
 }
+
+@font-face {
+  font-family: 'Vladimir';
+  src: url('../public/fonts/vladimir.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.whatever {
+  font-family: 'Vladimir';
+  font-weight: bold;
+}

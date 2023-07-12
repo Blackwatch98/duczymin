@@ -68,7 +68,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <li>
-                        <Link className={styles.link} href="/">
+                        <Link className={styles.link} href="/o-firmie">
                             O firmie
                         </Link>
                     </li>

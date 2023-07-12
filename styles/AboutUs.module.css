@@ -1,0 +1,71 @@
+.bodyContainer {
+    margin-top: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerContainer {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContainer h1 {
+    font-size: 48px;
+    display: inline-block;
+}
+
+.divider {
+    height: 35px;
+}
+
+.aboutUsContainer {
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.aboutUsPanel {
+    display: flex;
+    max-width: 100%;
+    width: 1160px;
+}
+  
+.aboutUsDescriptionContainer {
+    width: 66.66%;
+    text-align: center;
+}
+
+.aboutUsDescriptionContainer p {
+    padding-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.signature {
+    font-family: 'Vladimir', sans-serif;
+    font-weight: bold;
+}
+
+.portraitImage {
+    width: 33.33%;
+    margin-left: 10px;
+}
+
+.portraitImage img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 850px) {
+
+    .divider {
+        display: none;
+    }
+}

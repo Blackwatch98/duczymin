@@ -94,32 +94,32 @@ function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/rolety-zewnetrzne">
                                     Rolety zewnętrzne
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/drzwi-zewnetrzne">
                                     Drzwi zewnętrzne
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/zaluzje-fasadowe">
                                     Żaluzje fasadowe
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/rolety-wewnetrzne">
                                     Rolety wewnętrzne
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/automatyka">
                                     Automatyka
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/parapety">
                                     Parapety
                                 </Link>
                             </li>  
@@ -129,22 +129,22 @@ function Footer() {
                         <h4>Produkty dla firm</h4>
                         <ul>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/bramy-przemyslowe">
                                     Bramy przemysłowe
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/bramy-rolowane">
                                     Bramy rolowane
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/produkty/kraty-rolowane">
                                     Kraty rolowane
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/stolarka-aluminiowa">
                                     Stolarka aluminiowa
                                 </Link>
                             </li>
