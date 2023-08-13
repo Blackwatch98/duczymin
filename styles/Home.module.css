@@ -115,6 +115,11 @@
   text-align: center;
 }
 
+.slides {
+  width: 500%;
+  display: flex;
+}
+
 .slide {
   position: absolute;
   inset: 0;

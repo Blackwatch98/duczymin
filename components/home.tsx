@@ -100,7 +100,7 @@ export default function HomePage() {
           <div className={styles.carousel} data-carousel>
             <button onClick={() => movePrev()} className={`${styles["carousel-button"]} ${styles.prev}`}>&#8656;</button>
             <button onClick={() => moveNext()} className={`${styles["carousel-button"]} ${styles.next}`}>&#8658;</button>
-            <ul>
+            <ul className={styles.slides}>
               {
                 carouselImages.map((image, imageIndex) => (
                 <li className={currentIndex === imageIndex + 1 ? styles.slideActive : styles.slide}>
