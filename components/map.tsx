@@ -35,7 +35,7 @@ export default function Map() {
                     <InfoWindowF>
                     <div className={styles.popup}>
                         <p>Salon DUCZYMIN, 95-070 Rąbień ul. Słowiańska 92</p>
-                        <button onClick={showInMapClicked}>Znajdź mnie na mapie</button>
+                        <button onClick={showInMapClicked}>Sprawdź jak dojechać</button>
                     </div>
                     </InfoWindowF>
                 ) : null}

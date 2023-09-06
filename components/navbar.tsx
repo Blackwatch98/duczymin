@@ -78,12 +78,12 @@ export default function NavBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link className={styles.link} href="/">
+                        <Link className={styles.link} href="/salon">
                             Wirtualny salon
                         </Link>
                     </li>
                     <li>
-                        <Link className={styles.link} href="/">
+                        <Link className={styles.link} href="/kontakt">
                             Kontakt
                         </Link>
                     </li>

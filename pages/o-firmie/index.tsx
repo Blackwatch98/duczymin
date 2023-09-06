@@ -106,7 +106,7 @@ export default function AboutUsPage({reviews}) {
         </div>
       </div>
       <div className={styles.opinionsContainer}>
-        <h1>Ostatnie opinie</h1>
+        <h1>Opinie o nas</h1>
         <div className={styles.opinionsInnerContainer}>
           <Carousel 
             show={3}
