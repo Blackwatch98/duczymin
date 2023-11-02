@@ -73,7 +73,7 @@ export default function NavBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link className={styles.link} href="/">
+                        <Link className={styles.link} href="/realizacje">
                             Nasze realizacje
                         </Link>
                     </li>
