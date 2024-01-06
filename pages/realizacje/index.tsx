@@ -5,11 +5,11 @@ import { useState } from 'react';
 export interface MyImage {
     src: string,
     alt: string
-  }
+}
   
-  const galleryImages : MyImage[] = [
+const galleryImages : MyImage[] = [
     {src: 'okna-pcv2.jpg', alt:'okna-pcv'},
-    {src: 'okna-pcv2.jpg', alt:'okna-pcv'},
+    {src: 'brama-rolowana.jpg', alt:'okna-pcv'},
     {src: 'okna-pcv2.jpg', alt:'okna-pcv'},
     {src: 'okna-pcv2.jpg', alt:'okna-pcv'},
     {src: 'okna-pcv2.jpg', alt:'okna-pcv'},
@@ -17,7 +17,7 @@ export interface MyImage {
     {src: 'okna-pcv2.jpg', alt:'okna-pcv'},
     {src: 'okna-pcv2.jpg', alt:'okna-pcv'},
     {src: 'okna-pcv2.jpg', alt:'okna-pcv'}
-  ]
+]
 
 export default function Realizations() {
 
@@ -44,15 +44,15 @@ export default function Realizations() {
                     <h1>Nasze realizacje</h1>
                     <img className={styles.divider} src="/title_divider_reversed.png"></img>
                 </div>
-                {
-                        selectedImage && (
+                    {
+                        (
                             <div>
                             <div id="popup1"
-                            className={`${styles.overlay} ${!isOpen ? styles.overlayOpen : ''}`}
-                                onClick={() => handleShowDialog(null)}>
+                            className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`}
+                                onClick={() => handleShowDialog(selectedImage)}>
                             </div>
                             <dialog
-                            className={`${styles["dialogWindow"]} ${!isOpen ? styles.open : ''}`}
+                            className={`${styles["dialogWindow"]} ${isOpen ? styles.open : ''}`}
                             open
                             >
                             <img
