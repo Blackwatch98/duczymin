@@ -5,15 +5,11 @@ import { MyImage } from '../../../components/home';
 
 
 const krispolImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+  {src: '/krispol-brama-przemyslowa-mini.jpg', alt:'bramy przemysłowe', title:'Bramy przemysłowe', download: '/catalogs/krispol-katalog-przemyslowe-bramy-segmentowe.pdf'}
 ]
 
 const wisniowskiImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+  {src: '/wisniowski-bramy-przemyslowe-segmentowe.jpg', alt:'segmentowe', title:'Segmentowe', download: '/catalogs/bramy-przemyslowe-wisniowski.pdf'}
 ]
 
 export default function WindowsPage() {
@@ -32,7 +28,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/krispol-brama-przemyslowa.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>

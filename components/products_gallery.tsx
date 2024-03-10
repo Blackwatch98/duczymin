@@ -1,5 +1,4 @@
 import styles from '../styles/Products.module.css'
-import Link from 'next/link'
 import { MyImage } from './home';
 
 export interface ImageProps {
@@ -20,7 +19,9 @@ const ProductsGallery: React.FC<ImageProps> = ({images}: ImageProps) => {
                                     <p>{image.title}</p>
                                 </div>
                                 <div className={styles.buttonContainer}>
-                                    <button>POBIERZ KATALOG</button>
+                                    <a href={image.download} target="_blank" download>
+                                        <button>POBIERZ KATALOG</button>
+                                    </a>
                                 </div>
                                 </div>
                             </div>

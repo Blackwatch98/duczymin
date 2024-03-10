@@ -4,16 +4,8 @@ import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
-const krispolImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
-]
-
-const wisniowskiImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const niceImages : MyImage[] = [
+  {src: '/nice-naped-mini.jpg', alt:'automatyka', title:'Cennik 2023', download: '/catalogs/nice_cennik.pdf'}
 ]
 
 export default function WindowsPage() {
@@ -32,7 +24,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/nice-automatyka.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -44,13 +36,9 @@ export default function WindowsPage() {
           </div>
         </div>
         <div className={styles.producerNameContainer}>
-          <h2>Krispol</h2>
+          <h2>Nice</h2>
         </div>
-        <ProductsGallery images={krispolImages}/>
-        <div className={styles.producerNameContainer}>
-          <h2>Wiśniowski</h2>
-        </div>
-        <ProductsGallery images={wisniowskiImages}/>
+        <ProductsGallery images={niceImages}/>
       </div>
     </>
   )

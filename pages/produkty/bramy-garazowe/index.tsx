@@ -3,17 +3,13 @@ import styles from '../../../styles/Products.module.css'
 import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
-
 const krispolImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+  {src: '/brama-garaz.jpg', alt:'bramy garażowe', title:'Bramy garażowe', download: '/catalogs/krispol-katalog-bramy-garazowe.pdf'},
 ]
 
 const wisniowskiImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+  {src: '/wisniowski-brama-segmentowa.jpg', alt:'segmentowe', title:'Bramy segmentowe', download: '/catalogs/bramy-garazowe-segmentowe-wisniowski.pdf'},
+  {src: '/wisniowski-prime.jpg', alt:'segmentowe prime', title:'Bramy segmentowe Prime', download: '/catalogs/PRIME-bram-segmentowych-wisniowski.pdf'}
 ]
 
 export default function WindowsPage() {
@@ -32,7 +28,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/krispol-brama-garaż.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>

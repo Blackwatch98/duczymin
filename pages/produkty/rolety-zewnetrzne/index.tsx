@@ -4,16 +4,12 @@ import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
-const krispolImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const oknoplastImages : MyImage[] = [
+  {src: '/rolety-zew2.jpg', alt:'rolety', title:'Rolety', download: 'https://oknoplast.com.pl/broszury/OKNOPLAST-Rolety.pdf'}
 ]
 
-const wisniowskiImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const krispolImages : MyImage[] = [
+  {src: '/krispol-rolety-zewnetrzne-mini.jpg', alt:'żaluzje i rolety', title:'Żaluzje i rolety', download: '/catalogs/krispol-katalog-zaluzje-i-rolety.pdf'},
 ]
 
 export default function WindowsPage() {
@@ -32,14 +28,14 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/krispol-rolety-zewnetrzne.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+              Rolety firmowane marki KRISPOL zapewniają domownikom bezpieczeństwo i intymną atmosferę.
+              Energooszczędność i komfort użytkowania. Estetykę i najwyższą jakość wykonania gwarantującą długoletnią
+              i bezawaryjną pracę.
             </p>
           </div>
         </div>
@@ -48,9 +44,9 @@ export default function WindowsPage() {
         </div>
         <ProductsGallery images={krispolImages}/>
         <div className={styles.producerNameContainer}>
-          <h2>Wiśniowski</h2>
+          <h2>Oknoplast</h2>
         </div>
-        <ProductsGallery images={wisniowskiImages}/>
+        <ProductsGallery images={oknoplastImages}/>
       </div>
     </>
   )

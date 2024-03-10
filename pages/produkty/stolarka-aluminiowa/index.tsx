@@ -4,16 +4,12 @@ import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
-const krispolImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const oknoplastImages : MyImage[] = [
+  {src: '/aluhaus-stolarka-aluminiowa-mini.jpg', alt:'aluhaus', title:'Aluhaus', download: '/catalogs/Katalog-ALUHAUS.pdf'}
 ]
 
-const wisniowskiImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const krispolImages : MyImage[] = [
+  {src: '/krispol-stolarka-aluminiowa.jpg', alt:'stolarka aluminiowa', title:'Stolarka aluminiowa'}
 ]
 
 export default function WindowsPage() {
@@ -32,7 +28,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/aluhaus-stolarka-aluminiowa.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -44,13 +40,13 @@ export default function WindowsPage() {
           </div>
         </div>
         <div className={styles.producerNameContainer}>
+          <h2>Oknoplast</h2>
+        </div>
+        <ProductsGallery images={oknoplastImages}/>
+        <div className={styles.producerNameContainer}>
           <h2>Krispol</h2>
         </div>
         <ProductsGallery images={krispolImages}/>
-        <div className={styles.producerNameContainer}>
-          <h2>Wiśniowski</h2>
-        </div>
-        <ProductsGallery images={wisniowskiImages}/>
       </div>
     </>
   )

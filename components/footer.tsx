@@ -109,8 +109,8 @@ function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/produkty/rolety-wewnetrzne">
-                                    Rolety wewnętrzne
+                                <Link href="/produkty/osłony-wewnetrzne">
+                                    Osłony wewnętrzne
                                 </Link>
                             </li>
                             <li>
@@ -136,11 +136,6 @@ function Footer() {
                             <li>
                                 <Link href="/produkty/bramy-rolowane">
                                     Bramy rolowane
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/produkty/kraty-rolowane">
-                                    Kraty rolowane
                                 </Link>
                             </li>
                             <li>

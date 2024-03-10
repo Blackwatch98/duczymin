@@ -35,7 +35,7 @@
 }
 
 .contactSubcontainer:last-child  {
-    background-color: #333;;
+    background-color: #333;
     color: white;
     border-radius: 0 15px 15px 0;
 }
@@ -100,3 +100,22 @@
     margin-bottom: 30px;
     font-size: 30;
 }
+
+.contactContainer button {
+    height: 50px;
+    width: 200px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #333;;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    border: none;
+    padding: 0.5em 1.25em;
+  }
+  
+  .contactContainer button:hover,
+  .contactContainer button:focus {
+    background-color: rgb(71, 71, 71);
+    color: white;
+  }

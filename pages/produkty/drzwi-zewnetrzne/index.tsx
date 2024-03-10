@@ -4,16 +4,19 @@ import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
-const krispolImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const wikendImages : MyImage[] = [
+  {src: '/wiked-drzwi-zewnetrzne-mini.jpg', alt:'alu i pcv', title:'Aluminiowe i PCV', download: '/catalogs/wikend-pcv-alu.pdf'}
 ]
 
-const wisniowskiImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const krispolImages : MyImage[] = [
+  {src: '/krispol-drzwi-zewnetrzne.jpg', alt:'aluminiowe', title:'Aluminiowe', download: '/catalogs/krispol-katalog-aluminiowe-drzwi-zewnetrzne-solano.pdf'},
+  {src: '/krispol-drzwi-zewnetrzne-pvc.jpg', alt:'pcv', title:'PCV', download: '/catalogs/krispol-katalog-pvc-drzwi-zewnetrzne-solano.pdf'},
+  {src: '/krispol-drzwi-zewnetrzne-uniwersalne.jpg', alt:'uniwersalne', title:'Uniwersalne', download: '/catalogs/krispol-katalog-drzwi-zewnetrzne-uniwersalne.pdf'},
+]
+
+const oknoplastImages : MyImage[] = [
+  {src: '/oknoplast-drzwi-aluminiowe-aluminiowe.jpg', alt:'aluminiowe', title:'Aluminiowe', download: ''},
+  {src: '/oknoplast-drzwi-zewnetrzne-pcv.jpg', alt:'segmentowe', title:'HPL i PCV', download: 'https://oknoplast.com.pl/broszury/Drzwi-PVC-Oknoplast.pdf'}
 ]
 
 export default function WindowsPage() {
@@ -32,7 +35,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/wiked-drzwi-zewnetrzne.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -44,13 +47,17 @@ export default function WindowsPage() {
           </div>
         </div>
         <div className={styles.producerNameContainer}>
+          <h2>Wikęd</h2>
+        </div>
+        <ProductsGallery images={wikendImages}/>
+        <div className={styles.producerNameContainer}>
           <h2>Krispol</h2>
         </div>
         <ProductsGallery images={krispolImages}/>
         <div className={styles.producerNameContainer}>
-          <h2>Wiśniowski</h2>
+          <h2>Oknoplast</h2>
         </div>
-        <ProductsGallery images={wisniowskiImages}/>
+        <ProductsGallery images={oknoplastImages}/>
       </div>
     </>
   )

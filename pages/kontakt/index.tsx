@@ -2,6 +2,10 @@ import Head from 'next/head'
 import styles from '../../styles/Contact.module.css'
 import { useState } from 'react';
 import Map from '../../components/map';
+import ContactEmail from '../../components/contact_email';
+import type { NextApiRequest, NextApiResponse } from "next";
+import { render } from "@react-email/render";
+import emailjs from '@emailjs/browser'
 
 function isInputNamedElement(e: Element): e is HTMLInputElement & { name: string } {
   return 'value' in e && 'name' in e
@@ -10,8 +14,9 @@ function isInputNamedElement(e: Element): e is HTMLInputElement & { name: string
 export default function ContactPanel() {
     const [state, setState] = useState<string>();
 
-    async function handleOnSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+    const handleOnSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
       e.preventDefault();
+      console.log('wysylam');
 
       const formData: Record<string, string> = {};
 
@@ -21,18 +26,20 @@ export default function ContactPanel() {
       });
 
       setState('loading');
-
+/*
       await fetch('../api/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           nameInfo: formData.nameInfo,
-          emailAddress: formData.emailAddress,
+          emailAddress: 'danielduczyminski@gmail.com',//formData.emailAddress,
           phoneNumber: formData.phoneNumber,
           text: formData.text
         })
       })
-
+*/
+      emailjs.send('service_gycc04y', 'template_c7cdlgz', formData,'msIzurYpXZbmSLSkq');
+      //console.log('wyslalem');
       setState('ready');
     }
 
@@ -73,7 +80,7 @@ export default function ContactPanel() {
                   </span>
                 </p>
                 <p>
-                  Treść wiadomości
+                  Treść wiadomości (wymagane)
                   <span>
                     <textarea id='text' name='text'></textarea>
                   </span>

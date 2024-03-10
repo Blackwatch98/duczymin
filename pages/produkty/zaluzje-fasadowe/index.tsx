@@ -4,16 +4,9 @@ import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
-const krispolImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
-]
-
-const wisniowskiImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const anwisImages : MyImage[] = [
+  {src: '/anwis-zaluzje-fasadowe-mini.jpg', alt:'zaluzje fasadowe', title:'Żaluzje fasadowe', download: '/catalogs/anwis_zaluzje_fasadowe.pdf'},
+  {src: '/anwis-rolety-screen.jpg', alt:'rolety screen', title:'Rolety screen', download: '/catalogs/anwis_rolety_screen.pdf'}
 ]
 
 export default function WindowsPage() {
@@ -32,7 +25,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/anwis-zaluzje-tarasowe.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -44,13 +37,9 @@ export default function WindowsPage() {
           </div>
         </div>
         <div className={styles.producerNameContainer}>
-          <h2>Krispol</h2>
+          <h2>Anwis</h2>
         </div>
-        <ProductsGallery images={krispolImages}/>
-        <div className={styles.producerNameContainer}>
-          <h2>Wiśniowski</h2>
-        </div>
-        <ProductsGallery images={wisniowskiImages}/>
+        <ProductsGallery images={anwisImages}/>
       </div>
     </>
   )

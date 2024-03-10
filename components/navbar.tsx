@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect, UIEvent } from 'react'
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.css'
-import img from '../public/duczymin-logo-biale.png'
+//import img from '../public/duczymin-logo-biale.png'
+import img from '../public/logo_duczymin.png'
 import Image from 'next/image'
 
 export default function NavBar() {
@@ -37,10 +38,8 @@ export default function NavBar() {
             <div className={`${isActiveClass}`}>
                 <ul className={styles.ul} onClick={() => setIsNavbarExpanded(false)}>
                     <div className={styles.dropdown} onMouseLeave={() => setIsProductsClicked(false)}>
-                        <li>
-                            <Link className={styles.link} href="/" onMouseOver={() => {setIsProductsClicked(true)}}>
-                                Produkty
-                            </Link>
+                        <li className={styles.link} onMouseOver={() => {setIsProductsClicked(true)}}>
+                            Produkty
                         </li>
                         <div className={`${styles["dropdown-menu"]} ${isProductsClicked ? styles.active : styles.inactive}`}>
                             <div className={styles.column}>
@@ -50,7 +49,7 @@ export default function NavBar() {
                                 <li><a href="/produkty/rolety-zewnetrzne">Rolety zewnętrzne</a></li>
                                 <li><a href="/produkty/drzwi-zewnetrzne">Drzwi zewnętrzne</a></li>
                                 <li><a href="/produkty/zaluzje-fasadowe">Żaluzje fasadowe</a></li>
-                                <li><a href="/produkty/rolety-wewnetrzne">Rolety wewnętrzne</a></li>
+                                <li><a href="/produkty/oslony-wewnetrzne">Osłony wewnętrzne</a></li>
                                 <li><a href="/produkty/automatyka">Automatyka</a></li>
                                 <li><a href="/produkty/parapety">Parapety</a></li>
                             </div>
@@ -58,8 +57,8 @@ export default function NavBar() {
                                 <li><h3>Dla firm</h3></li>
                                 <li><a href="/produkty/bramy-przemyslowe">Bramy przemysłowe</a></li>
                                 <li><a href="/produkty/bramy-rolowane">Bramy rolowane</a></li>
-                                <li><a href="/produkty/kraty-rolowane">Kraty rolowane</a></li>
                                 <li><a href="/produkty/stolarka-aluminiowa">Stolarka aluminiowa</a></li>
+                                <li></li>
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -73,9 +72,11 @@ export default function NavBar() {
                         </Link>
                     </li>
                     <li>
+                        {/*
                         <Link className={styles.link} href="/realizacje">
                             Nasze realizacje
                         </Link>
+                        */}
                     </li>
                     <li>
                         <Link className={styles.link} href="/salon">

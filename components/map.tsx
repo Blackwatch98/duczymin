@@ -28,7 +28,8 @@ export default function Map() {
                     lat: 51.7903003959238,
                     lng: 19.340856562499862
                 }}
-                icon={'/markerIconAdv2.png'}
+                //icon={'/markerIconAdv2.png'}
+                icon={{url:'/markerIcon2.png', scaledSize: new google.maps.Size(75, 75)}}
                 onClick={() => !activeMarker ? setActiveMarker(true) : setActiveMarker(false)}
             >
                 {activeMarker ? (

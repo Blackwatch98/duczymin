@@ -5,13 +5,13 @@ import { MyImage } from '../../../components/home';
 
 
 const productsImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Pava'},
-  {src: '/okna-pcv2.jpg', alt:'drzwi', title:'Winergetic Premium'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'winergetic-pp', title:'Winergetic Premium Passive'},
-  {src: '/okna-prismatic.jpg', alt:'okna-prismatic', title:'Prismatic'},
-  {src: '/okna-marzen.jpg', alt:'okna-marzen', title:'Pixel'},
-  {src: '/okna-pcv.jpg', alt:'okna-pcv', title:'Prolux'},
-  {src: '/okna-koncept.jpg', alt:'okna-koncept', title:'Koncept'}
+  {src: '/okno-pava.jpg', alt:'okna-pava', title:'Pava', download: '/catalogs/OKNOPLAST-PAVA.pdf'},
+  {src: '/okna-winergetic-premium.jpg', alt:'okna-prismatic', title:'Winergetic Premium', download: '/catalogs/OKNOPLAST-Winergetic-Premium.pdf'},
+  {src: '/okno-winergetic-premium-passive.jpg', alt:'winergetic-pp', title:'Winergetic Premium Passive', download: '/catalogs/OKNOPLAST-Winergetic-Premium-Passive.pdf'},
+  {src: '/okna-prismatic.jpg', alt:'okna-prismatic', title:'Prismatic', download: '/catalogs/OKNOPLAST-PRISMATIC.pdf'},
+  {src: '/okno-pixel.jpg', alt:'okna-marzen', title:'Pixel', download: '/catalogs/OKNOPLAST-PIXEL.pdf'},
+  {src: '/okno-prolux.jpg', alt:'okna-prolux', title:'Prolux', download: '/catalogs/OKNOPLAST-PROLUX.pdf'},
+  {src: '/okno-koncept.jpg', alt:'okna-koncept', title:'Koncept', download: ''}
 ]
 
 export default function WindowsPage() {
@@ -30,7 +30,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/okna-winergetic-premium.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>

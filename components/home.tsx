@@ -15,17 +15,18 @@ export interface MyImage {
   ref?: string,
   title: string,
   description?: string
+  download?: string
 }
 
 const homeProductsImages : MyImage[] = [
-  {src: 'okna-pcv2.jpg', alt:'okna-pcv', ref: "/produkty/okna-pcv", title:'Okna PCV', description:'Okna stanowią nie tylko podstawowy element każdego budynku, ale również są jego dekoracją...'},
+  {src: 'okna-winergetic-premium.jpg', alt:'okna-pcv', ref: "/produkty/okna-pcv", title:'Okna PCV', description:'Okna stanowią nie tylko podstawowy element każdego budynku, ale również są jego dekoracją...'},
   {src: 'brama-garaz.jpg', alt:'brama', ref: "/produkty/bramy-garazowe", title:'Bramy garażowe', description:'Brama powinna być dopasowana do elewacji budynku oraz swoją konstrukcją zapewniać maksimum bezpieczeństwa...'},
-  {src: 'rolety-zew2.jpg', alt:'rolety-zew', ref: "/rolety", title:'Rolety zewnętrzne', description:'Zapewniają wygodę, ułatwiają oszczędzanie energii i poprawiają skuteczność ochrony antywłamaniowej...'},
-  {src: 'drzwi-zew.jpg', alt:'drzwi', ref: "/drzwi", title:'Drzwi zewnętrzne', description:'Oprócz roli zabezpieczenia budynków i mieszkań stanowią też zaporę przed utrata ciepła...'},
-  {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: "/zaluzje", title:'Żaluzje fasadowe', description:'Żaluzje skutecznie chronią wnętrze domu przed promieniami słonecznymi, nie dopuszczając do wzrostu temperatury...'},
-  {src: 'rolety-wew.jpg', alt:'rolety', ref: "/rolety", title:'Rolety wewnętrzne', description:'Na razie brak.'},
-  {src: 'automatyka.jpg', alt:'automatyka', ref: "/automatyka", title:'Automatyka', description:'Tylko profesjonalny dobór i montaż automatyki domowej zapewnia prawidłowe i długoletnie funkcjonowanie urządzeń sterujących...'},
-  {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: "/parapety", title:'Parapety', description:'Parapety stanowią ważny element wykończeniowy okien...'},
+  {src: 'rolety-zew2.jpg', alt:'rolety-zew', ref: "/produkty/rolety-zewnetrzne", title:'Rolety zewnętrzne', description:'Zapewniają wygodę, ułatwiają oszczędzanie energii i poprawiają skuteczność ochrony antywłamaniowej...'},
+  {src: 'drzwi-zew.jpg', alt:'drzwi', ref: "/produkty/drzwi-zewnetrzne", title:'Drzwi zewnętrzne', description:'Oprócz roli zabezpieczenia budynków i mieszkań stanowią też zaporę przed utrata ciepła...'},
+  {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: "/produkty/zaluzje-fasadowe", title:'Żaluzje fasadowe', description:'Żaluzje skutecznie chronią wnętrze domu przed promieniami słonecznymi, nie dopuszczając do wzrostu temperatury...'},
+  {src: 'rolety-wew.jpg', alt:'rolety', ref: "/produkty/oslony-wewnetrzne", title:'Osłony wewnętrzne', description:'Na razie brak.'},
+  {src: 'automatyka.jpg', alt:'automatyka', ref: "/produkty/automatyka", title:'Automatyka', description:'Tylko profesjonalny dobór i montaż automatyki domowej zapewnia prawidłowe i długoletnie funkcjonowanie urządzeń sterujących...'},
+  {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: "/produkty/parapety", title:'Parapety', description:'Parapety stanowią ważny element wykończeniowy okien...'},
 ]
 
 const companyProductsImages : MyImage[] = [
@@ -37,13 +38,15 @@ const companyProductsImages : MyImage[] = [
 
 const carouselImages : CarouselImage[] = [
   {src: "/promotions/test.jpg"},
-  {src: "/okna-marzen.jpg"},
+  {src: "/okno-pixel.jpg"},
   {src: "/promotions/promotion.jpg"}
 ]
 
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(1);
   const imageHoverRef = useRef(null);
+  
+  /*
   const [myElementIsVisible, setMyElementIsVisible] = useState(false);
   
   useEffect(() => {
@@ -63,7 +66,7 @@ export default function HomePage() {
       observer.unobserve(imageHoverRef.current!);
     }
   }, []);
-
+  */
   const moveNext = () => {
     if(currentIndex !== carouselImages.length) {
       setCurrentIndex(currentIndex + 1);
@@ -168,16 +171,18 @@ export default function HomePage() {
         <Gallery images={homeProductsImages}/>
         <h1 className={styles.h1}>Produkty dla firm</h1>
         <Gallery images={companyProductsImages}/>
+        {/*
         <h1 className={styles.h1}>Nasze realizacje</h1>
         <div className={styles.realizationContainer}>
           <div className={styles.realizationBox}>
             <img ref={imageHoverRef} src="home.png"></img>
             <div className={`${styles.imageHover} ${myElementIsVisible ? styles.hovered : ''}`}>
-              <h2>Sprawdź dlaczego warto nam zaufać!</h2>
-              <button>Kliknij mnie</button>
+              <h2>Sprawdź dlaczego warto nam zaufać!</h2>     
+              <a href='/realizacje'>Kliknij mnie</a>
             </div>
           </div>
         </div>
+        */}
         <h1 className={styles.h1}>Znajdź nas</h1>
         <Map/>
       </div>

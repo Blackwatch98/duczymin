@@ -4,16 +4,12 @@ import ProductsGallery from '../../../components/products_gallery';
 import { MyImage } from '../../../components/home';
 
 
-const krispolImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const medosImages : MyImage[] = [
+  {src: '/medos-parapety-wewnetrzne-mini.jpg', alt:'cennik', title:'Cennik 2023', download: '/catalogs/medos-katalog-parapety-2023.pdf'},
 ]
 
-const wisniowskiImages : MyImage[] = [
-  {src: '/okna-pcv.jpg', alt:'segmentowe', title:'Segmentowe'},
-  {src: '/okna-pcv2.jpg', alt:'rolowane', title:'Rolowane'},
-  {src: '/okna-winergetic-premium-passive.jpg', alt:'rozwierne', title:'Rozwierne'},
+const kratexImages : MyImage[] = [
+  {src: '/parapet-wewnętrzny.jpg', alt:'cennik', title:'Cennik 2023', download: '/catalogs/cennik-parapetow-kratex.pdf'}
 ]
 
 export default function WindowsPage() {
@@ -32,7 +28,7 @@ export default function WindowsPage() {
           <img className={styles.divider} src="/title_divider_reversed.png"></img>
         </div>
         <div className={styles.landscapeContainer}>
-          <img src={`/okna-pcv2.jpg`}/>
+          <img src={`/medos-parapety-wewnetrzne.jpg`}/>
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
@@ -44,13 +40,13 @@ export default function WindowsPage() {
           </div>
         </div>
         <div className={styles.producerNameContainer}>
-          <h2>Krispol</h2>
+          <h2>Medos</h2>
         </div>
-        <ProductsGallery images={krispolImages}/>
+        <ProductsGallery images={medosImages}/>
         <div className={styles.producerNameContainer}>
-          <h2>Wiśniowski</h2>
+          <h2>Kratex</h2>
         </div>
-        <ProductsGallery images={wisniowskiImages}/>
+        <ProductsGallery images={kratexImages}/>
       </div>
     </>
   )

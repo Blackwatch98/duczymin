@@ -66,12 +66,17 @@ export default function AboutUsPage({reviews}) {
             <p className={'whatever'}>Halina Duczymińska</p>
           </div>
           <div className={styles.portraitImage}>
-            <img src='/portret.png'></img>
+            <img src='/engineer.jpg'></img>
           </div>
+          {/*
+            <div className={styles.portraitImage}>
+              <img src='/portret.png'></img>
+            </div>
+          */}
         </div>
       </div>
       <div className={styles.honourContainer}>
-        <h1>Wyróżnia nas</h1>
+        <h1>Co nas wyróżnia?</h1>
         <div className={styles.badgesContainer}>
           <div className={styles.badgesRow}>
             <div className={styles.columnContainer}>
@@ -139,9 +144,6 @@ export default function AboutUsPage({reviews}) {
             </button>
           </div>
         </div>
-      </div>
-      <div className={styles.certificatesContainer}>
-        <h1>Certyfikaty</h1>
       </div>
     </>
   )

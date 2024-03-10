@@ -24,11 +24,12 @@
 }
 
 .aboutUsContainer {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     background-color: lightgray;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .aboutUsPanel {
@@ -40,10 +41,11 @@
 .aboutUsDescriptionContainer {
     width: 66.66%;
     text-align: center;
+    padding: 70px;
 }
 
 .aboutUsDescriptionContainer p {
-    padding-top: 10px;
+    padding: 10px;
     font-family: Arial, sans-serif;
 }
 
@@ -52,20 +54,9 @@
     font-weight: bold;
 }
 
-.portraitImage {
-    width: 33.33%;
-    margin-left: 10px;
-}
-
-.portraitImage img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
 .honourContainer {
     position: relative;
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -113,18 +104,19 @@
 
 .opinionsContainer {
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .opinionsInnerContainer {
     max-width: 1200px;
     position: relative;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .carousel button {
+    background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;
     top: 50%;
     height: 46px;
     width: 46px;
@@ -136,6 +128,10 @@
     background-color: lightgray;
     border-radius: 50%;
     transform: translateY(-50%);
+}
+
+.carousel div > button[data-direction=left] {
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .carousel div:first-child button{
@@ -165,8 +161,17 @@
   color: white;
 }
 
-.certificatesContainer {
-    text-align: center;
+
+.portraitImage {
+    width: 33.33%;
+    height: 50%;
+    margin-left: 30px;
+}
+
+.portraitImage img {
+    object-fit: fill;
+    width: 75%;
+    height: 200%;
 }
 
 @media (max-width: 850px) {
