@@ -25,7 +25,7 @@ const homeProductsImages : MyImage[] = [
   {src: 'drzwi-zew.jpg', alt:'drzwi', ref: "/produkty/drzwi-zewnetrzne", title:'Drzwi zewnętrzne', description:'Oprócz roli zabezpieczenia budynków i mieszkań stanowią też zaporę przed utrata ciepła...'},
   {src: 'zaluzja-pozioma.jpg', alt:'żaluzje fasadowe', ref: "/produkty/zaluzje-fasadowe", title:'Żaluzje fasadowe', description:'Żaluzje skutecznie chronią wnętrze domu przed promieniami słonecznymi, nie dopuszczając do wzrostu temperatury...'},
   {src: 'rolety-wew.jpg', alt:'rolety', ref: "/produkty/oslony-wewnetrzne", title:'Osłony wewnętrzne', description:'Na razie brak.'},
-  {src: 'automatyka.jpg', alt:'automatyka', ref: "/produkty/automatyka", title:'Automatyka', description:'Tylko profesjonalny dobór i montaż automatyki domowej zapewnia prawidłowe i długoletnie funkcjonowanie urządzeń sterujących...'},
+  {src: 'nice-automatyka.jpg', alt:'automatyka', ref: "/produkty/automatyka", title:'Automatyka', description:'Tylko profesjonalny dobór i montaż automatyki domowej zapewnia prawidłowe i długoletnie funkcjonowanie...'},
   {src: 'parapet-wewnętrzny.jpg', alt:'parapety', ref: "/produkty/parapety", title:'Parapety', description:'Parapety stanowią ważny element wykończeniowy okien...'},
 ]
 
@@ -37,9 +37,9 @@ const companyProductsImages : MyImage[] = [
 ]
 
 const carouselImages : CarouselImage[] = [
-  {src: "/promotions/test.jpg"},
+  {src: "/promotions/koncept_white.jpg"},
   {src: "/okno-pixel.jpg"},
-  {src: "/promotions/promotion.jpg"}
+  {src: "/promotions/krispol-bramy-garazowe.jpg"}
 ]
 
 export default function HomePage() {

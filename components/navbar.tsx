@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, UIEvent } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import styles from '../styles/Navbar.module.css'
 //import img from '../public/duczymin-logo-biale.png'
 import img from '../public/logo_duczymin.png'
@@ -9,6 +10,7 @@ export default function NavBar() {
     const [isNavbarExpanded, setIsNavbarExpanded] = useState(true);
     const [isNavbarSticky, setisNavbarSticky] = useState(false);
     const [isProductsClicked, setIsProductsClicked] = useState(false);
+    const router = useRouter();
 
     const scrollNavbar = () => {
         if(window.scrollY > 0) {
@@ -23,7 +25,20 @@ export default function NavBar() {
         return () => window.removeEventListener("scroll", scrollNavbar);
     });
 
-    let isActiveClass = isNavbarExpanded ? `${styles["navbar-links"]} ${styles.magic}` : styles["navbar-links"]
+    const isActiveClass = isNavbarExpanded
+    ? `${styles['navbar-links']} ${styles.magic}`
+    : styles['navbar-links'];
+
+    //let isActiveClass = isNavbarExpanded ? `${styles["navbar-links"]} ${styles.magic}` : styles["navbar-links"]
+
+    const isLinkActive = (href: any) => router.pathname === href;
+
+    const isProductLinkActive = isLinkActive('/produkty/okna-pcv') || isLinkActive('/produkty/bramy-garazowe') ||
+                                isLinkActive('/produkty/rolety-zewnetrzne') || isLinkActive('/produkty/drzwi-zewnetrzne') ||
+                                isLinkActive('/produkty/zaluzje-fasadowe') || isLinkActive('/produkty/oslony-wewnetrzne') ||
+                                isLinkActive('/produkty/automatyka') || isLinkActive('/produkty/parapety') ||
+                                isLinkActive('/produkty/bramy-przemyslowe') || isLinkActive('/produkty/bramy-rolowane') ||
+                                isLinkActive('/produkty/stolarka-aluminiowa')
 
     return (
         <nav className={styles.navbar}>
@@ -38,7 +53,7 @@ export default function NavBar() {
             <div className={`${isActiveClass}`}>
                 <ul className={styles.ul} onClick={() => setIsNavbarExpanded(false)}>
                     <div className={styles.dropdown} onMouseLeave={() => setIsProductsClicked(false)}>
-                        <li className={styles.link} onMouseOver={() => {setIsProductsClicked(true)}}>
+                        <li className={`${styles.link} ${isProductLinkActive ? styles.active : ''}`} onMouseOver={() => setIsProductsClicked(true)}>
                             Produkty
                         </li>
                         <div className={`${styles["dropdown-menu"]} ${isProductsClicked ? styles.active : styles.inactive}`}>
@@ -67,7 +82,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <li>
-                        <Link className={styles.link} href="/o-firmie">
+                        <Link className={`${styles.link} ${isLinkActive('/o-firmie') ? styles.active : ''}`} href="/o-firmie">
                             O firmie
                         </Link>
                     </li>
@@ -79,12 +94,12 @@ export default function NavBar() {
                         */}
                     </li>
                     <li>
-                        <Link className={styles.link} href="/salon">
+                        <Link className={`${styles.link} ${isLinkActive('/salon') ? styles.active : ''}`} href="/salon">
                             Wirtualny salon
                         </Link>
                     </li>
                     <li>
-                        <Link className={styles.link} href="/kontakt">
+                        <Link className={`${styles.link} ${isLinkActive('/kontakt') ? styles.active : ''}`} href="/kontakt">
                             Kontakt
                         </Link>
                     </li>

@@ -71,6 +71,17 @@
   transform: scaleX(1);
 }
 
+/****************************/
+.navbar-links .link.active::before {
+  transform: scaleX(1);
+}
+
+/* Navbar links style for active link color */
+.navbar-links .link.active {
+  color: white; /* Change the color as needed */
+}
+/*****************************/
+
 .dropdown {
   position: relative;
 }
