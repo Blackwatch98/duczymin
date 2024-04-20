@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duczymin.pl/site-map.xml
