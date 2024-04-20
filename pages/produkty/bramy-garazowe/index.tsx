@@ -34,7 +34,7 @@ export default function WindowsPage() {
           <div className={styles.descriptionPanel}>
             <p>
             Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
+            Powinna być dopasowana wyglądem do elewacji budynku, a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
             Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
             </p>
           </div>

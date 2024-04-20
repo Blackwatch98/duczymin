@@ -33,9 +33,11 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-              Rolety firmowane marki KRISPOL zapewniają domownikom bezpieczeństwo i intymną atmosferę.
-              Energooszczędność i komfort użytkowania. Estetykę i najwyższą jakość wykonania gwarantującą długoletnią
-              i bezawaryjną pracę.
+            Rolety firmowane marki KRISPOL nie tylko dbają o bezpieczeństwo i intymność domowników,
+            lecz także zdobywają ich zaufanie poprzez wyjątkową funkcjonalność i energooszczędność,
+            co pozwala na oszczędność w dłuższej perspektywie czasowej. Ich estetyczny design doskonale komponuje się z każdym wnętrzem,
+            dodając mu elegancji i nowoczesności, a najwyższa jakość wykonania zapewnia nie tylko długoletnią, bezawaryjną pracę,
+            lecz także gwarantuje satysfakcję użytkowników przez wiele lat.
             </p>
           </div>
         </div>

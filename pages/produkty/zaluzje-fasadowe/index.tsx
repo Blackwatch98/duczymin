@@ -30,9 +30,13 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+            Żaluzje fasadowe, innowacyjne rozwiązanie architektoniczne,
+            nie tylko kontrolują ilość światła wpadającego do wnętrza,
+            ale także dodają charakteru każdemu budynkowi.
+            Ich wszechstronność pozwala na regulację przepływu powietrza i utrzymanie komfortowej temperatury,
+            jednocześnie chroniąc wnętrze przed nadmiernym nagrzewaniem się. Dzięki nowoczesnym technologiom i
+            wysokiej jakości materiałom, żaluzje fasadowe stanowią nie tylko efektywne narzędzie energetyczne,
+            ale także estetyczny element elewacji, podkreślający indywidualny styl architektoniczny.
             </p>
           </div>
         </div>

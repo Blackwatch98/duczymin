@@ -40,9 +40,10 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+            Drzwi zewnętrzne to nie tylko wejście do domu - to wizytówka każdego wnętrza,
+            symbol bezpieczeństwa i elegancji. Nasze drzwi łączą w sobie nowoczesny design z solidnością wykonania,
+            tworząc harmonijną kompozycję estetyki i funkcjonalności, która witając Cię na progu,
+            zaprasza do świata domowego komfortu i bezpieczeństwa.
             </p>
           </div>
         </div>

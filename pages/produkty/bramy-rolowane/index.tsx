@@ -29,9 +29,11 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+            Bramy rolowane to wszechstronne rozwiązanie zapewniające nie tylko bezpieczeństwo,
+            ale także efektywne wykorzystanie przestrzeni. Ich elastyczna konstrukcja pozwala na płynne otwieranie i
+            zamykanie, co jest szczególnie ważne w przypadku obiektów o ograniczonej przestrzeni manewrowej.
+            Dodatkowo, dzięki solidnym materiałom i nowoczesnym mechanizmom, bramy rolowane charakteryzują się
+            długotrwałą niezawodnością, zapewniając spokój i komfort użytkownikom na wiele lat.
             </p>
           </div>
         </div>

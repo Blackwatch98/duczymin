@@ -87,7 +87,7 @@ body {
 }
 
 body {
-  color: rbg(--foreground-rgb);
+  color: light-dark(#000, #ffff);
   /*
   background: linear-gradient(
       to bottom,
@@ -188,9 +188,11 @@ footer {
 }
 
 @media (prefers-color-scheme: dark) {
+  /*
   html {
     color-scheme: dark;
   }
+  */
 }
 
 @media (prefers-reduced-motion: reduce) {

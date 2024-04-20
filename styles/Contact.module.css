@@ -114,8 +114,42 @@
     padding: 0.5em 1.25em;
   }
   
-  .contactContainer button:hover,
-  .contactContainer button:focus {
+.contactContainer button:hover,
+.contactContainer button:focus {
     background-color: rgb(71, 71, 71);
     color: white;
-  }
+}
+
+/* Form css */
+
+.alert {
+    /*--bs-alert-bg: transparent;*/
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: inherit;
+    border-color: transparent;
+    border: 1px solid #f1aeb5;
+    border-radius: 0.375rem;
+    /*--bs-alert-link-color: inherit;*/
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    color: #58151c;
+    background-color: none;
+    border: 1px solid #f1aeb5;
+    border-radius: 0.375rem;
+}
+
+.alert.alert-danger {
+    color: #58151c;
+    background-color: #f8d7da;
+    border-color: #f1aeb5;
+    /*--bs-alert-link-color: #58151c;*/
+}
+
+.alert.alert-success {
+    color: #0a3622;
+    background-color: #d1e7dd;
+    border-color: #a3cfbb;
+    /*--bs-alert-link-color: #0a3622;*/
+}

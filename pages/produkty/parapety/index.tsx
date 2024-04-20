@@ -33,9 +33,11 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+            Parapety nie tylko dodają elegancji i charakteru każdemu pomieszczeniu,
+            lecz także stanowią praktyczne rozwiązanie, oferując miejsce do umieszczenia roślin czy ozdób,
+            oraz wygodne siedzisko przy oknie, co wpływa na komfort użytkowania wnętrz.
+            Wykonane z wysokiej jakości materiałów, zapewniają trwałość, łatwość utrzymania czystości oraz
+            doskonałą izolację termiczną, zachowując estetyczny wygląd i funkcjonalność przez wiele lat.
             </p>
           </div>
         </div>

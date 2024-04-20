@@ -11,7 +11,7 @@ const productsImages : MyImage[] = [
   {src: '/okna-prismatic.jpg', alt:'okna-prismatic', title:'Prismatic', download: '/catalogs/OKNOPLAST-PRISMATIC.pdf'},
   {src: '/okno-pixel.jpg', alt:'okna-marzen', title:'Pixel', download: '/catalogs/OKNOPLAST-PIXEL.pdf'},
   {src: '/okno-prolux.jpg', alt:'okna-prolux', title:'Prolux', download: '/catalogs/OKNOPLAST-PROLUX.pdf'},
-  {src: '/okno-koncept.jpg', alt:'okna-koncept', title:'Koncept', download: ''}
+  //{src: '/okno-koncept.jpg', alt:'okna-koncept', title:'Koncept', download: ''}
 ]
 
 export default function WindowsPage() {

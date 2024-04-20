@@ -29,9 +29,12 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+            Automatyka i napędy do bram, gwarantujące nie tylko wygodę,
+            ale także bezpieczeństwo oraz skuteczne zarządzanie dostępem do posesji,
+            stanowią niezawodne rozwiązanie dla każdego użytkownika. Dzięki zaawansowanej technologii i
+            innowacyjnym rozwiązaniom, zapewniają płynne i ciche otwieranie oraz zamykanie bram,
+            umożliwiając kontrolę za pomocą różnorodnych urządzeń i systemów zarządzania,
+            co sprawia, że codzienne korzystanie z bram staje się łatwe i komfortowe.
             </p>
           </div>
         </div>

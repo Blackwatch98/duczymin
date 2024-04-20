@@ -33,9 +33,11 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+            Stolarka aluminiowa, będąca synonimem nowoczesności i trwałości,
+            nie tylko nadaje wnętrzom elegancki wygląd, ale także zapewnia izolację termiczną i
+            akustyczną na najwyższym poziomie. Jej lekka konstrukcja i łatwość konserwacji sprawiają,
+            że jest doskonałym wyborem zarówno do nowoczesnych, jak i tradycyjnych projektów architektonicznych,
+            gwarantując nie tylko estetykę, ale także komfort użytkowania przez długie lata.
             </p>
           </div>
         </div>

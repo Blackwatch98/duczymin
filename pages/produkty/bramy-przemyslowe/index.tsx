@@ -33,9 +33,11 @@ export default function WindowsPage() {
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionPanel}>
             <p>
-            Brama garażowa jest jednym z najważniejszych elementów wykończenia domu.
-            Powinna być dopasowana wyglądem do elewacji budynku a także poprzez swoją konstrukcję zapewnić maksimum bezpieczeństwa domownikom.
-            Solidność wykonania oraz profesjonalny montaż to głowne cechy bram i usług oferowanych przez naszą firmę.
+            Bramy przemysłowe, będące nieodłącznym elementem każdego obiektu komercyjnego czy przemysłowego,
+            nie tylko zapewniają skuteczną ochronę mienia, ale także ułatwiają płynny przepływ ruchu pojazdów i towarów.
+            Dzięki solidnej konstrukcji i nowoczesnym technologiom, bramy te charakteryzują się niezawodnością działania oraz
+            łatwością obsługi, co sprawia, że są niezastąpionym narzędziem w zapewnianiu bezpieczeństwa i efektywności pracy w
+            różnego rodzaju przedsiębiorstwach.
             </p>
           </div>
         </div>
