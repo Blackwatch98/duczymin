@@ -36,8 +36,10 @@ const companyProductsImages : MyImage[] = [
 ]
 
 const carouselImages : CarouselImage[] = [
+  {src: "/promotions/oknoplast-pixel-promocja.jpg"},
   {src: "/promotions/koncept_white.jpg"},
-  {src: "/okno-pixel.jpg"},
+  {src: "/promotions/krispol-promocja-przemyslowe.jpg"},
+  {src: "/promotions/okno-pixel.jpg"},
   {src: "/promotions/krispol-bramy-garazowe.jpg"}
 ]
 
@@ -111,7 +113,7 @@ export default function HomePage() {
               }
             </ul>
             <div className={`${styles["container-dots"]}`}>
-                {Array.from({length: 3}).map((item, index) => (
+                {Array.from({length: carouselImages.length}).map((item, index) => (
                   <div
                     onClick={() => moveDot(index + 1)}
                     className={currentIndex === index + 1 ? `${styles["dotActive"]}` : `${styles["dot"]}`}>
@@ -136,12 +138,12 @@ export default function HomePage() {
               konkurencyjne ceny, co pozwala nam sprostać oczekiwaniom nawet najbardziej wymagających klientów.
             </p>
             <p>
-            Nasi doświadczeni doradcy służą bezpłatną pomocą i fachowymi poradami na każdym etapie,
-            od doboru odpowiednich rozwiązań po ich użytkowanie. Dysponujemy wyspecjalizowanymi ekipami monterskimi oraz
-            zapleczem magazynowym i logistycznym, co pozwala nam zapewnić kompleksową obsługę naszych klientów.
+              Nasi doświadczeni doradcy służą bezpłatną pomocą i fachowymi poradami na każdym etapie,
+              od doboru odpowiednich rozwiązań po ich użytkowanie. Dysponujemy wyspecjalizowanymi ekipami monterskimi oraz
+              zapleczem magazynowym i logistycznym, co pozwala nam zapewnić kompleksową obsługę naszych klientów.
             </p>
             <p>
-            Jeśli poszukujesz wysokiej jakości produktów, doświadczenia oraz profesjonalnego podejścia - zapraszamy do współpracy z nami!
+              Jeśli poszukujesz wysokiej jakości produktów, doświadczenia oraz profesjonalnego podejścia - zapraszamy do współpracy z nami!
             </p>
           </div>
         </div>

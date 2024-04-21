@@ -165,7 +165,7 @@ function Footer() {
                 </div>
             </div>      
             <div className={styles.copyrightContainer}>
-                <p>Copyright ©2023 Duczymin.pl - bramy, okna, automatyka, inteligentne domy.</p>
+                <p>Copyright ©2024 Duczymin.pl - bramy, okna, automatyka, inteligentne domy.</p>
                 <p className={styles.signature}>Stronę wykonał: Daniel Duczymiński.</p>
             </div>      
         </footer>
