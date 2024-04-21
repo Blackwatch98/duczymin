@@ -10,16 +10,12 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
-.brand-title {
-  font-size: 1.5rem;
-}
-
-.navbar-links {
+.navbar-links-container {
   height: 100%;
   width: 100%;
 }
 
-.navbar-links ul {
+.navbar-links-container ul {
   display: flex;
   position: relative;
   float: right;
@@ -27,7 +23,7 @@
   padding: 0;
 }
 
-.navbar-links li {
+.navbar-links-container li {
   position: relative;
   list-style-type: none;
   color: #ffffff99;
@@ -46,16 +42,16 @@
   line-height: 32px;
 }
 
-.logo img {
+.brand-logo img {
   height: 60px;
   width: 260px;
 }
 
-.navbar-links li:hover {
+.navbar-links-container li:hover {
   color: white;
 }
 
-.navbar-links .link::before {
+.navbar-links-container .link::before {
     content: "";
     height: 4px;
     position: absolute;
@@ -67,17 +63,17 @@
     transition: transform 300ms ease;
 }
 
-.navbar-links .link:hover::before {
+.navbar-links-container .link:hover::before {
   transform: scaleX(1);
 }
 
 /****************************/
-.navbar-links .link.active::before {
+.navbar-links-container .link.active::before {
   transform: scaleX(1);
 }
 
 /* Navbar links style for active link color */
-.navbar-links .link.active {
+.navbar-links-container .link.active {
   color: white; /* Change the color as needed */
 }
 /*****************************/
@@ -152,7 +148,7 @@
 }
 
 @media (hover) {
-  .navbar-links .link::before {
+  .navbar-links-container .link::before {
     transform: scaleX(0);
   }
 }
@@ -185,22 +181,26 @@
       display: flex;
   }
 
-  .navbar-links {
+  .navbar-links-container {
       display: none;
       width: 100%;
   }
 
-  .navbar-links ul {
+  .navbar-links-container ul {
       width: 100%;
       flex-direction: column;
   }
 
-  .navbar-links li {
+  .navbar-links-container li {
       text-align: center;
       width: 100%;
   }
 
-  .magic {
+  .navbar-links-container li:not(:first-child) {
+    border-top: 1px solid lightgray;
+  }
+
+  .navbar-mobile {
       display: flex;
   }
 }
